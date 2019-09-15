@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML8</title>
+        <style>
+            #information-section input {
+                margin: 3px;
+            }
+            .checkbox {
+                display:flex;
+            }
+            .checkbox div {
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset id="information-section">
+            <legend>Jūsų informacija</legend>
+            <form>
+                Vardas:&nbsp;&nbsp; <input type="text" name="vardas"><br>
+                Pavardė: <input type="text" name="pavardė">
+            </form>
+        </fieldset>
+        <fieldset id="questions-section">
+            <legend>Klausimai</legend>
+            <form>
+                Kaip sužinojote apie mus?
+                <select name="kaip sužinojote apie mus">
+                    <option value="Google">Google</option>
+                </select><br><br>
+                Ar apsilankysite vėl?<br>
+                Taip <input type="radio" name="ar-apsilankysite" value="Taip">
+                Ne <input type="radio" name="ar-apsilankysite" value="Ne">
+                Galbūt <input type="radio" name="ar-apsilankysite" value="Galbūt">
+            </form><br>
+            <form>
+                Ką manote apie kursą?<br>
+                <textarea name="message" rows="8" cols="100" placeholder="Rašykite viską ką galvojate"></textarea>
+            </form><br>
+            <form>
+                Pažymėkite programavimo/žymėjimo kalbas su kuriomis esate susipažinę:<br>
+                <div  class="checkbox">
+                    <div>
+                        <input type="checkbox"> C#<br>
+                        <input type="checkbox"> HTML<br>
+                        <input type="checkbox"> Python
+                    </div>
+                    <div>
+                        <input type="checkbox"> JAVA<br>
+                        <input type="checkbox"> CSS<br>
+                        <input type="checkbox"> Ruby<br>
+                    </div>
+                    <div>
+                        <input type="checkbox">PHP<br>
+                        <input type="checkbox">JavaScript
+                    </div>
+                </div>
+                <br><br>
+                <button type="button">Siųsti</button>
+            </form>
+        </fieldset>
+    </body>
+</html>
