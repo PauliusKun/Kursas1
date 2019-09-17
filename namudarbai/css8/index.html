@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>CSS8</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+	</head>
+	<body>
+		<h1>Registracija į renginį</h1>
+		<section id="registration-form">
+			<div>
+				<h2>Registracijos forma</h2>
+				<p>Jeigu norite užsiregistruoti į renginį, užpildykite žemiau esančią formą. Žemiau lentelėje galite matyti jau užsiregistravusius dalyvius.</p>
+			</div>
+			<form class="input-name-surname">
+				<div>
+					<label for="name">Vardas</label><input class="input" type="text" name="Vardas"><br>
+				</div>
+				<div>
+					<label for="surname">Pavardė</label><input class="input" type="text" name="Pavardė"><br>
+				</div>
+				<div>
+				<label for="email">Elektroninis paštas</label><input class="input" type="email" name="Paštas"><br>
+				</div>
+				<button type="button">Registruoti</button>
+			</form>
+		</section>
+		<section id="cheked-in-list">
+			<div>
+				<h2>Jau užsiregistravę dalyviai:</h2>
+				<table>
+					<tr>
+						<th class="name">Vardas</th>
+						<th>Pavardė</th>
+						<th>Elektroninis paštas</th>
+					</tr>
+					<tr>
+						<td>Jonas</td>
+						<td class="align-center">Jonaitis</td>
+						<td class="align-center">jonaitis@gmail.com</td>
+					</tr>
+					<tr>
+						<td>Petras</td>
+						<td class="align-center">Petraitis</td>
+						<td class="align-center">petraitis@gmail.com</td>
+					</tr>
+				</table>
+			</div>
+		</section>
+	</body>
+</html>

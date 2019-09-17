@@ -1,0 +1,42 @@
+
+
+#main-page {
+	margin: 0;
+	height: 400px;
+	text-align: center;
+	padding: 30px;
+	border: 5px double black;
+}
+
+a {
+	text-decoration: none;
+	font-family: 'Courier New', serif;
+}
+
+a:hover {
+	color: red;
+}
+
+p {
+	font-family: 'Courier New', serif;
+	text-align: center;
+}
+
+.header {
+	margin: auto;
+	width: 600px;
+}
+
+.nav-bar ul {
+	display: flex;
+	justify-content: center;
+	list-style-type: none;
+	border-top: 2px solid black;
+	border-bottom: 2px solid grey;
+	padding: 0;
+}
+
+.nav-bar li {
+	padding: 10px 20px;
+}
+

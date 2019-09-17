@@ -1,0 +1,61 @@
+
+#registration-form {
+	margin: 0;
+	width: 700px;
+	background-color:#fff3a3;
+	padding: 20px;
+}
+
+.input {
+	height: 25px;
+	width: 350px;
+	border-radius: 5px;
+	margin: 2px;
+}
+label, .input {
+	flex: 1 0 0;
+}
+
+.input-name-surname > div {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content:space-between;
+}
+
+.input-name-surname button {
+	height: 30px;
+	width: 550px;
+	border-radius: 5px;
+}
+
+#cheked-in-list {
+	margin-top: 3px;
+	width: 700px;
+	background-color:#bef5b8;
+	padding: 20px;
+}
+
+table {
+	width: 700px;
+	height: 100px;
+}
+
+table, td {
+	border: 2px solid black;
+	border-collapse: collapse;
+
+}
+
+th {
+	background-color:#c7baff;
+
+}
+
+.align-center {
+	text-align:center;
+}
+
+.name {
+	width: 400px;
+}
