@@ -29,6 +29,10 @@ label, .input {
 	border-radius: 5px;
 }
 
+.form-span {
+	display: flex;
+}
+
 #cheked-in-list {
 	margin-top: 3px;
 	width: 700px;
@@ -56,6 +60,4 @@ th {
 	text-align:center;
 }
 
-.name {
-	width: 400px;
-}
+
