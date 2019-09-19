@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="lt">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>JS1</title>
+	</head>
+	<body>
+		<div id="main-content" class="content">
+
+		</div>
+
+<!--		starting java sript before closing body tag-->
+		<script>
+
+			/** 1.
+			* declaration
+			**/
+			var myVarUndefined, sumResult, promtText, finalOutput, whichPositionIsMySymbol; //typeOf undefined
+			var hasItemClassHello = true; //typeOf boolen
+			var firstNumber = 5; //typeOf number
+			var secondNumber = '3'; //typeOf string
+			var helloText = 'Labas pasauli'; //typeOf string
+
+
+			// 2. calculations, functions, overwrites
+			helloText = 'Labas!'; //overwrite var helloText
+//			promtText = prompt('Enter your age', '17');
+			sumResult = firstNumber + firstNumber; //expected value is 10
+			finalOutput = helloText + '&nbsp;' + secondNumber + '&nbsp;' + sumResult;
+			whichPositionIsMySymbol = helloText.indexOf('a'); //expected output is 1 not 3
+			lengthOfString = helloText.length;
+
+			finalOutput = finalOutput + 'position > ' + whichPositionIsMySymbol;
+			finalOutput = finalOutput + 'length of string is > ' + lengthOfString;
+
+			if (whichPositionIsMySymbol >0) {
+				document.write('ok 1<br><br>');
+				}
+			if (whichPositionIsMySymbol >10) {
+				document.write('ok 2<br><br>');
+				} else {
+						document.write('ok 2<br><br>');
+							   }
+			(whichPositionIsMySymbol >10) ? document.write('ok 3.1<br><br>'):
+			document.write('ok 3.2<br><br>');
+
+
+
+			// 3. output
+			document.write(finalOutput);
+			console.log(finalOutput);
+//			document.write(promtText);
+			document.getElementById('main-content').innerHTML = '<b>Yes</b>';
+		</script>
+
+	</body>
+</html>

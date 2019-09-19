@@ -1,0 +1,71 @@
+body {
+	margin: 0 auto;
+	background-color: azure;
+}
+
+p {
+	font-size: 11px;
+}
+
+#shop {
+	width: 70%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#shop div {
+	padding: 10px;
+}
+
+@media screen and (min-width: 600px) {
+				.e-shop {
+					flex: 1 0 0;
+				}
+}
+
+.laptop {
+	margin: 5px;
+	background-color: white;
+	width: 145px;
+	overflow: hidden;
+	border: 1px solid white;
+	border-radius: 4px;
+}
+
+.laptop:hover {
+	box-shadow: 0 4px 8px 0 #c9d1ff, 0 2px 4px 0 #c9d1ff;
+}
+
+.laptop img {
+	width: 145px;
+}
+
+.hidden-text {
+	font-size: 14px;
+	height: 30px;
+	overflow: hidden;
+	flex-direction: row;
+	flex-wrap: nowrap:
+	}
+
+.price {
+	font-size: 25px;
+	margin-bottom: 0;
+}
+
+del {
+	font-size: 14px;
+}
+
+button {
+	background-color: #9be35f;
+	font-size: 16px;
+	width: 100px;
+	height: 40px;
+	color: white;
+	border: none;
+	border-radius: 2px;
+}
