@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>JS2</title>
+		<link href="css/styles.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<div id="calculate-button" onclick="sumUpAndInsert(2);">Calculate</div>
+		<div id="clear" onclick="clearResultDiv();">Clear</div>
+		<div id="result"></div>
+		<div id="show-bigest-number-button" onclick="bigestNumber(15, 50, 10);">Show bigest number</div>
+		<div onclick="devideNumbers(25, 5)">devide numbers</div>
+		<script>
+			function calculateResult () {
+
+				alert('yes, it\'s working');
+			}
+			function sumUp (x, y) {
+				var result = x + y;
+				return result;
+			}
+			function sumUpAndInsert (x, y = 10) {
+				var result = x+ y;
+				document.getElementById('result').innerHTML = result;
+			}
+			function clearResultDiv () {
+				document.getElementById('result').innerHTML = '';
+			}
+
+			function insertValueIntoDiv () {
+
+			}
+			function bigestNumber (x, y, z) {
+				if ((x>y)&(x>z)) {
+					result = x;
+				}
+				else if ((y>x)&(y>z)) {
+				 	result = y;
+				}
+				else {
+					result = z;
+				}
+				alert('Bigest number is' + result);
+			}
+
+			function devideNumbers (x, y) {
+				var result = x / y;
+				var myArray = [x, y, result];
+				var isNumberRepeated;
+
+				for ( var i=0; i < myArray.length; i++ ) {
+					if (myArray[1] == myArray[2]) {
+						isNumberRepeated = true;
+				}
+			}
+					(isNumberRepeated)?	alert(myArray[2]) : '';
+			}
+		</script>
+	</body>
+	</html>
