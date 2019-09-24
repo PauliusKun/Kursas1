@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>JS5</title>
+	</head>
+	<body>
+		<form>
+			<label>Įveskite savo amžių</label>
+			<input id="input-age" type="number" name="age" autofocus>
+			<input type="submit" onclick="compareAge();">
+		</form>
+		<script>
+  			var age, result;
+			function compareAge() {
+  			age = Number(document.getElementById('input-age').value);
+  			if ( age >= 18 ) {
+    			result = 'True';
+  			}
+			else {
+    			result = 'False';
+  			}
+  			alert (result);
+		}
+		</script>
+	</body>
+</html>
