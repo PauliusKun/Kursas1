@@ -4,40 +4,40 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Bluerent</title>
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/styles.css" type="text/css">
 		<link rel="icon" href="images/favicon.ico">
     </head>
     <body>
 		
-            						<!-- 1. Header -->
+					<!-- 1. Header -->
 		
         <header id="header" class="header-flex">
             <div class="logo">
-				<img src="images/1.%20Variantas%20(geras)tamsintasbandymas%20sumazint.svg" alt="logo">
+				<img src="images/bluerent-logo.svg" alt="logo">
 			</div>
-			<div class="top-telephone-mail">
+			<div class="top-telephone-and-mail">
 				<div>
-					<img class="hours-icon" src="images/24-hours-support.svg">
+					<img class="hours-icon" src="images/hours-support-icon.svg">
 				</div>
 				<div>
 					<p>+37068663132</p>
 				</div>
 				<div> 
-					<img class="mail-icon" src="images/at%20.svg">
+					<img class="mail-icon" src="images/eta-icon%20.svg">
 				</div>
 				<div>
 					<p>info@bluerent.lt</p>
 				</div>
 			</div>
-            <div>
-                <select class="selectpicker" data-width="fit">
-                    <option  data-content='<span class="flag-icon flag-icon-lt"></span> Lietuvių'>LT</option>
-                    <option data-content='<span class="flag-icon flag-icon-us"></span> English'>EN</option>
+            <div class="select-language">
+                <select>
+                    <option value="LT">LT</option>
+                    <option value="EN">EN</option>
                 </select>
             </div>
         </header>
         
-            						<!-- 2. Nav bar -->
+					<!-- 2. Nav bar -->
 		
         <nav id="nav-bar" class="nav-bar">
             <div><a href="#about">Apie mus</a></div>
@@ -46,21 +46,22 @@
             <div><a href="#contacts">Kontaktai</a></div>
         </nav>
 		        
-            						<!--3. Article -->
+					<!--3. Article -->
 		
         <main id="main-window">
-			<container id="search-slide-windows" class="search-slide-windows">
+			<container id="search-form-and-banner" class="search-form-and-banner">
 				<article class="car-search-window">
 					<h3>Automobilio nuomos paieška</h3>
 					<form class="form-section">
-						<label for="place-select">Paėmimas</label>
-						<div class="display-select">
+						<label for="pickup-place-select">Paėmimas</label>
+						<div class="select-date-and-time">
 							<select name="Paėmimo-vieta">
-								<option value="nothing-choose"  hidden>Paėmimo vieta</option>
+								<option value="nothing-choose" hidden>Paėmimo vieta</option>
 								<option value="Vilniaus ofisas">Vilniaus ofisas, Priegliaus 17</option>
 								<option value="VNO">Vilniaus Oro Uostas (VNO)</option>
 								<option value="KUN">Kauno Oro Uostas (KUN)</option>
 								<option value="PLQ">Palangos Oro Uostas (PLQ)</option>
+								<option value="other">Kita vieta</option>
 							</select>
 							<select name="date">
 								<option value="" hidden>Data</option>
@@ -117,14 +118,15 @@
 								<option>23:30</option>
 							</select>
 						</div>
-						<label for="place-select">Grąžinimas</label>
-						<div class="display-select">
+						<label for="return-place-select">Grąžinimas</label>
+						<div class="select-date-and-time">
 							<select name="Gražinimo-vieta">
-								<option value="nothing-choose"  hidden>Grąžinimo vieta</option>
+								<option value="nothing-choose" hidden>Grąžinimo vieta</option>
 								<option value="Vilniaus ofisas">Vilniaus ofisas, Priegliaus 17</option>
 								<option value="VNO">Vilniaus Oro Uostas (VNO)</option>
 								<option value="KUN">Kauno Oro Uostas (KUN)</option>
 								<option value="PLQ">Palangos Oro Uostas (PLQ)</option>
+								<option value="other">Kita vieta</option>
 							</select>
 							<select name="date">
 								<option value="" hidden >Data</option>
@@ -183,14 +185,15 @@
 						</div>
 					</form>
 					<div class="button-place">
-						<button class="butn" href="">Ieškoti pasiūlymo</button>
+						<button class="button" href="">Ieškoti pasiūlymo</button>
 					</div>
 				</article>
 
-				<!--5. Aside-->
-				<aside class="slide-window">
+					<!--5. Aside-->
+
+				<aside class="banner-window">
 					<div>
-						<img src="images/Range%20shot_Hybrid_all%20cars_website_FRONT%20ON_tcm-3044-1346255.jpg">
+						<img src="images/hybrid-car-1.jpg">
 					</div>
 				</aside>
 			</container>
@@ -210,7 +213,7 @@
         	</aside2>
 		</main>
 		
-       					<!--		Section 1 About us-->
+					<!--Section1 About us-->
 		
 		<section id="about" class="about-us">
 			<div>
@@ -247,7 +250,7 @@
 			</div>
 		</section>
 		
-						<!--		Section 2 Services-->
+					<!--Section2 Services-->
 		
 		<section id="services">
 			<div>
@@ -289,7 +292,7 @@
 			</div>
 		</section>
 		
-					<!-- Section 3 Contacts -->
+					<!-- Section3 Contacts -->
 		
 		<section id="contacts">
 			<div>
@@ -306,21 +309,24 @@
 					</p>
 				</div>
 				<div>
-					<img class="vno-logo" src="images/Vilnius-airport_logo.svg.png" alt="Vilnius Airport">
+					<img class="vno-logo" src="images/vno-logo.png" alt="Vilnius Airport">
 					<p>Rodūnios kelias 10a, Vilnius, LT-02189, Lietuva</p>
 				</div>
 				<div>
-					<img src="images/Kaunas_Airport_logo.svg.png" alt="Kaunas Airport">
+					<img src="images/kun-logo.png" alt="Kaunas Airport">
 					<p>Oro uosto g. 4, Karmėlava, LT-54460, Lietuva</p>
 				</div>
 				<div>
-					<img src="images/airport-logo-palanga.png" alt="Palanga Airport">
+					<img class="plq-logo" src="images/plq-logo.png" alt="Palanga Airport">
 					<p>Liepojos pl. 1, Palanga, LT-00169, Lietuva</p>
 				</div>
 			</div>
 		</section>
+
+					<!--Footer-->
+
 		<footer>
-			<div class="footer">
+			<div id="footer" class="footer">
 				<a href="https://linkedin.com/in/paulius-kundrutas-30739920">LinkedIn</a>
 				<a href="https://www.facebook.com/pauleoo">Facebook</a>
 				<a href="https://www.instagram.com/pauliuskundrutas/Instagram">Instagram</a>

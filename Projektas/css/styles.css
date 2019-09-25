@@ -41,7 +41,7 @@ body {
 	height: 50px;
 }
 
-.top-telephone-mail {
+.top-telephone-and-mail {
     align-items:center;
     display: flex;
 }
@@ -56,13 +56,19 @@ body {
     padding: 10px;
 }
 
+.select-language select{
+	border: none;
+	background-color: #66BFBF;
+	color: #ffffff;
+	}
+
 @media all and (max-width: 800px) {
 	.header-flex {
 		flex-flow:wrap;
 		padding: 10px;
 		justify-content: center;
 	}
-	.selectpicker {
+	.select-language select{
 	margin: 10px;
 	}
 }
@@ -114,7 +120,7 @@ body {
 
 					/*3. Article*/
 
-.search-slide-windows {
+.search-form-and-banner {
 	display: flex;
     justify-content: space-between;
 	flex-direction: row;
@@ -134,10 +140,13 @@ body {
 	padding: 10px 0;
 }
 
-.display-select {
+.select-date-and-time {
 	display: flex;
 	flex-direction: row;
 	padding: 20px;
+}
+.select-date-and-time select {
+	margin: 5px;
 }
 
 .button-place {
@@ -145,7 +154,7 @@ body {
 	padding: 20px 0;
 }
 
-.butn {
+.button {
 	background: #11cdd4;
 	background-image: linear-gradient(to bottom, #11cdd4, #11999e);
 	border-radius: 8px;
@@ -158,41 +167,42 @@ body {
   	border: none;
 }
 
-.butn:hover {
+.button:hover {
   	background: #30e3cb;
   	background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
   	text-decoration: none;
 }
 
-@media all and (max-width: 600px) {
-	.search-slide-windows {
+@media all and (max-width: 800px) {
+	.search-form-and-banner {
 		justify-content: center;
 		padding: 10px;
 	}
-	. search-slide-windows > * {
-				flex: 1 100%;
-			}
 	.car-search-window {
 		flex: 1 0 0;
-	    }
-	.display-select {
-		flex-flow: column;
+		text-align: center;
+	}
+	.select-date-and-time {
+		justify-content: center;
 	}
 }
 
-@media all and (max-width: 800px) {
-	.search-slide-windows {
+@media all and (max-width: 600px) {
+	.search-form-and-banner {
 		justify-content: center;
 		padding: 10px;
 	}
 	.car-search-window {
 		flex: 1 0 0;
+	    }
+	.select-date-and-time {
+		flex-flow: column;
 	}
 }
 
 					/*4. Aside*/
 
-.slide-window {
+.banner-window {
 	width: 60%;
 	border-radius: 6px;
 /*	border: 1px solid #66BFBF;*/
@@ -201,13 +211,13 @@ body {
 	justify-content: center;
 }
 
-.slide-window img {
+.banner-window img {
  	width: 100%;
 	border-radius: 6px;
 }
 
 @media all and (max-width: 800px) {
-	.slide-window {
+	.banner-window {
 		display: none;
 	}
 }
@@ -344,6 +354,7 @@ body {
 .company-details {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: space-between;
 }
 
@@ -362,15 +373,41 @@ body {
 }
 
 .vno-logo {
-	margin-top: 30px;
+	margin-top: 45px;
 }
+
+.plq-logo {
+	margin-top: 15px;
+}
+
+@media all and (max-width: 816px) {
+	.company-details {
+		justify-content: center;
+		flex: 1 0 0;
+	}
+	.company-details div{
+	width: 30%;
+	}
+}
+
+@media all and (max-width: 600px) {
+	.company-details {
+		flex: 1 0 0;
+		flex-flow: column;
+		align-items: center;
+	}
+	.company-details div{
+		width: 50%;
+	}
+}
+
 					/*9. Footer */
 
 .footer {
 	background-color: #66BFBF;
+	text-align: center;
 	margin: 0 auto;
 	padding: 20px 0 0;
-	text-align: center;
 }
 
 .footer a{
@@ -385,7 +422,8 @@ body {
 }
 
 .copyright{
-  	color: #EAF6F6;
-  	font-size: 0.75rem;
-  	padding: 10px 0;
+	color: #EAF6F6;
+	font-size: 12px;
+	padding: 15px;
+	margin: 0;
 }
