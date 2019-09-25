@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>JS4.1</title>
+		<sript src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></sript>
+	</head>
+	<body>
+		<div id="my-text"></div>
+		<script>
+			var $text = 'Hello world!';
+			var myArray = ['Jonas', 'Milda', 'Tomas', 'Ona'];
+			
+			//$('div#my-text').??? = $text;
+			$.each(myArray, function (index, value) {
+				console.log(index + ': ' + value);
+			});
+		</script>
+	</body>
+</html>

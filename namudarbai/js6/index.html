@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>JS6</title>
+	</head>
+	<body>
+		<form>
+			<label>Įveskite savo:</label><br><br>
+			<label>Vardą</label><input id="input-name" type="text" name="name" autofocus>
+			<label>Pavardę</label>
+			<input id="input-surname" type="text" name="surname">
+			<input type="submit" onclick="printNameAndSurname();" value="Prisijungti">
+		</form>
+		<script>
+  			var name, surname, result;
+			function printNameAndSurname() {
+  			name = Text(document.getElementById('input-name').value);
+			surname = Text(document.getElementById('input-surname').value);
+  			if ( (name.isEmpty()) && (surname.isEmpty()) ) {
+    			result = 'Prašau įvesti vardą ir pavardę';
+  			}
+			else {
+    			result = name + surname + ' ką tik prisijungė';
+  			}
+  			alert (result);
+		}
+		</script>
+	</body>
+</html>

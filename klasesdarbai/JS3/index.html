@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS2</title>
+</head>
+
+<body>
+    <div id="calculate-button" onclick="saveValue();">Calculate</div>
+    <div id="clear-result-button" onclick="clearResultDiv();">Clear Result</div>
+    <div id="result"></div>
+    <div id="show-bigest-number-button" onclick="bigestNumber(15, 50, 10);">Show bigest number</div>
+    <div onclick="devideNumbers(25, 5);">Devide numbers</div>
+    <div id="new-result"></div>
+    <div id="counter"></div>
+    <script>
+        function calculateResult () {
+            alert('yes, it\'s working');    
+        }
+        
+        var counter = 0; // global variable
+        
+        function saveValue () {
+            
+            var firstNumber = prompt('Enter x value');
+            var secondNumber = Number(prompt('Enter y value'));
+            
+            firstNumber = Number(firstNumber); //changing var "firstNumber" type from string to number.
+            
+            function sumUp (x = 5, y = 2) {
+                var result; //scope/inside variable
+                result = x + y;
+                return result;
+            }
+            //alert(sumUp());
+            
+            // insert sumUp function result into new variable.
+            var sumResult = sumUp(firstNumber, secondNumber);
+            var newResultDiv = document.getElementById('new-result');
+            var tempTotalSumResult = Number(newResultDiv.innerHTML);
+            var totalSumResult;
+            
+            // TODO: move if to function
+            if ( ( tempTotalSumResult + sumResult) < 100 ) {
+                totalSumResult = tempTotalSumResult + sumResult;
+            }
+            else {
+                totalSumResult = tempTotalSumResult - sumResult;
+            }
+            newResultDiv.innerHTML = totalSumResult;
+            document.getElementById('result').innerHTML = sumResult;
+            
+            //add counter how many times is button COUNT cliked.
+            counter++;
+            document.getElementById('counter').innerHTML = counter;
+        }
+        function clearResultDiv () {
+                // create new HTML element which id="clear-result-button"
+                // getElementById and make it's value empty.
+                document.getElementById('result').innerHTML = '';
+        }
+        function insertValueIntoDiv () {
+            // function call in function
+            
+            // create new function in which new variable value will be function sumUpAndInsert() return value.
+            //then copy this value to new <div id="duplicated-value"> AND print value to console
+            //and then clean calc value calling function clearResultDiv();
+        }
+        function sumUpAndInsert (x, y = 10) {
+                // sukurti kintamiji, jo reiksme yra x ir y suma
+                // gauta atsakyma ideti i div, kurio id yra "result"(pasirenkat.innerHtml = "reiksme")
+                var result = x + y;
+                document.getElementById('result').innerHTML = result;
+
+        }
+        function bigestNumber (x, y, z) {
+            // alert only the bigest number
+            // if ( (viena salyga) && (abi dalygos turi sutapti) )
+            // if ( (salyga viena) || (salyga antra) )
+            var result;
+            
+            if ( (x > y) && (x > z) ) {
+                result = x;
+            }
+            else if ( (y > x) && (y > z) ) {
+                result = y;
+            }
+            else {
+                result = z;
+            }
+            alert('Bigest number is' + result);
+        }
+        function bigestNumberOptimized (x, y, z) {
+            if (x > y) {
+                if (x > z) {
+                        result = x;
+                    }
+                    else {
+                        result = z;
+                }
+            } else {
+                if (y > z) {
+                    result = y;
+                }
+                else {
+                    result = z;
+                }
+            }
+        }
+        function devideNumbers (x, y) {
+            var result = x / y;
+            var myArray = [x, y, result]; // length is 3
+            var isNumbersRepeated;
+            
+            for ( var i = 0; i < myArray.length ; i++ ) {
+                //alert(i);
+                if (myArray[1] == myArray[2]) {
+                    isNumbersRepeated = true;
+                }
+            }
+            //alert(isNumbersRepeated);
+            (isNumbersRepeated) ? alert('my devisor is same as result') : ''; // give link documentation
+            
+        }
+        // var myArray = ['Jonas', 'Petras', 'Andrius']
+        // create function inWhichPositionThisName ('Petras') () { alert(); }
+    </script>
+</body>
+</html>
