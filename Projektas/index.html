@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lt">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +23,7 @@
 					<p>+37068663132</p>
 				</div>
 				<div> 
-					<img class="mail-icon" src="images/eta-icon%20.svg" alt="mail-icon">
+					<img class="mail-icon" src="images/eta-icon.svg" alt="mail-icon">
 				</div>
 				<div>
 					<p>info@bluerent.lt</p>
@@ -42,7 +42,7 @@
         <nav id="nav-bar" class="nav-bar">
             <div><a href="#about">Apie mus</a></div>
             <div><a href="#services">Paslaugos</a></div>
-            <div><a href="">Sąlygos</a></div>
+            <div><a href="documents/salygos.pdf" target="_blank">Sąlygos</a></div>
             <div><a href="#contacts">Kontaktai</a></div>
         </nav>
 		        
@@ -53,7 +53,7 @@
 				<div class="car-search-window">
 					<h3>Automobilio nuomos paieška</h3>
 					<form class="form-section">
-						<label for="pickup-place-select">Paėmimas</label>
+						<label for="choose-pickup-place">Paėmimas</label>
 						<div class="select-date-and-time">
 							<select name="Paėmimo-vieta">
 								<option value="nothing-choose" hidden>Paėmimo vieta</option>
@@ -63,9 +63,7 @@
 								<option value="PLQ">Palangos Oro Uostas (PLQ)</option>
 								<option value="other">Kita vieta</option>
 							</select>
-							<select name="date">
-								<option value="" hidden>Data</option>
-							</select>
+							<input class="date-input" type="date" name="date" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
 							<select name="laikas">
 								<option value="" hidden>Laikas</option>
 								<option>00:00</option>
@@ -118,7 +116,7 @@
 								<option>23:30</option>
 							</select>
 						</div>
-						<label for="return-place-select">Grąžinimas</label>
+						<label for="choose-return-place">Grąžinimas</label>
 						<div class="select-date-and-time">
 							<select name="Gražinimo-vieta">
 								<option value="nothing-choose" hidden>Grąžinimo vieta</option>
@@ -128,9 +126,7 @@
 								<option value="PLQ">Palangos Oro Uostas (PLQ)</option>
 								<option value="other">Kita vieta</option>
 							</select>
-							<select name="date">
-								<option value="" hidden >Data</option>
-							</select>
+							<input class="date-input" type="date" name="date" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
 							<select name="laikas">
 								<option value="" hidden>Laikas</option>
 								<option>00:00</option>
@@ -327,9 +323,9 @@
 
 		<footer>
 			<div id="footer" class="footer">
-				<a href="https://linkedin.com/in/paulius-kundrutas-30739920">LinkedIn</a>
-				<a href="https://www.facebook.com/pauleoo">Facebook</a>
-				<a href="https://www.instagram.com/pauliuskundrutas/Instagram">Instagram</a>
+				<a href="https://linkedin.com/in/paulius-kundrutas-30739920" target="_blank">LinkedIn</a>
+				<a href="https://www.facebook.com/pauleoo" target="_blank">Facebook</a>
+				<a href="https://www.instagram.com/pauliuskundrutas/Instagram" target="_blank">Instagram</a>
 				<p class="copyright">© 2019 Bluerent</p>
 			</div>
 		</footer>

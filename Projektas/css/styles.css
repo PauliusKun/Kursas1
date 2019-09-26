@@ -36,9 +36,13 @@ body {
     padding: 0 20px;
 }
 
+.logo {
+	align-items: center;
+	display: flex;
+}
+
 .logo img {
 	width: 200px;
-	height: 50px;
 }
 
 .top-telephone-and-mail {
@@ -124,7 +128,7 @@ body {
 	display: flex;
     justify-content: space-between;
 	flex-direction: row;
-/*	flex-wrap: wrap;*/
+	flex-wrap: wrap;
     margin: 0 auto;
     padding: 20px 90px;
 }
@@ -146,6 +150,10 @@ body {
 	padding: 20px;
 }
 .select-date-and-time select {
+	margin: 5px;
+}
+
+.date-input {
 	margin: 5px;
 }
 
@@ -175,7 +183,7 @@ body {
 
 @media all and (max-width: 800px) {
 	.search-form-and-banner {
-		justify-content: center;
+		justify-content:center;
 		padding: 10px;
 	}
 	.car-search-window {
@@ -191,6 +199,7 @@ body {
 	.search-form-and-banner {
 		justify-content: center;
 		padding: 10px;
+		flex: 1 0 0;
 	}
 	.car-search-window {
 		flex: 1 0 0;
@@ -203,9 +212,9 @@ body {
 					/*4. Aside*/
 
 .banner-window {
-	width: 60%;
+	width: 50%;
 	border-radius: 6px;
-/*	border: 1px solid #66BFBF;*/
+	border: 1px solid #66BFBF;
 	align-items: center;
 	display: flex;
 	justify-content: center;
