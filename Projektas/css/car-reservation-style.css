@@ -1,0 +1,29 @@
+#car-reservation-form {
+	background-color: #ffffff;
+	border: 1px solid black;
+}
+
+#car-details {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	flex-flow: row wrap;
+}
+
+#car-details div {
+/*	border: 1px solid black;*/
+	margin: 10px;
+}
+
+#car-details img {
+	width: 250px;
+}
+
+#other-details {
+	display: flex;
+	justify-content: center;
+}
+
+.included-in-price-table td {
+	font-size: 12px;
+}

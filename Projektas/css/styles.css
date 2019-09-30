@@ -164,7 +164,7 @@ body {
     background-color: #EAF6F6;
     color: #11999E;
 	width: 50%;
-    font-size: 14px;
+    font-size: 16px;
     border: 1px solid #11999E;
     border-radius: 4px;
 }
@@ -194,7 +194,7 @@ body {
 /*	font-weight: bold;*/
     background-color: #EAF6F6;
     color: #11999E;
-    font-size: 14px;
+    font-size: 16px;
 	border: 1px solid #11999E;
     border-radius: 4px;
 }
@@ -237,10 +237,7 @@ body {
 	.select-date-and-time {
 		justify-content: center;
 	}
-	.select-pickup-place {
-		width: auto;
-	}
-	.select-return-place {
+	.select-pickup-place, .select-return-place {
 		width: auto;
 	}
 }
@@ -262,6 +259,7 @@ body {
 	}
 	.date-input {
 		height: 28px;
+		width: auto;
 		}
 }
 
