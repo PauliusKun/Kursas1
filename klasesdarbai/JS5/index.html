@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>1a užduotis | JQ2 | 10a paskaita</title>
+	<sript src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></sript>
+	<style>
+        .error {
+            background: red;
+            color: white;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 3px;
+	   }
+
+	   /* Not our focus */
+        body {
+	       padding: 50px;
+	       font-size: 16pt;
+        }
+	</style>
+</head>
+<body>
+	<div class='error'>
+		Klaidos žinutė
+	</div><button id='show-error'>Rodyti klaidos pranešimą</button>
+	<script>
+		$(document).ready(function () {
+			$('.error').fadeOut(3000);
+
+			$('#show-error').click(function () {
+
+				$('#show-error').fadeOut(3000);
+
+				$('.error').fadeIn(3000);
+			});
+		});
+
+	          // atlikti:
+	          /*
+                  1. paslapeti klaidos pranesimo teksta / div'a.
+	              2. paspaudus mygtuką paslėpti mygtuką
+	              3. rodyti klaidos pranešimą.
+	          */
+	</script>
+</body>
+</html>

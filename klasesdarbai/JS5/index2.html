@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<sript src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></sript>
+		<title>ToDoList</title>
+	</head>
+	<body>
+		<div>
+			<h1>To do list</h1>
+			<p>What I have to do today:</p>
+			<ol id="to-do-list">
+				<li>Breathe</li>
+			</ol>
+		</div>
+		<div>
+			<form id="our-form" action="send.php" method="post">
+				<input type="text" placeholder="New thing what to do">
+				<input type="submit" value="Add item">
+			</form>
+		</div>
+		<script>
+			$(document).ready(function () {
+
+				var $inputText, $inputTextValue;
+
+				var $list = $('#to-do-list');
+				var $ourForm = $('#our-form');
+
+				$ourForm.on('submit', function (event) {
+					event.preventDefault();
+
+					$inputText = $('input:text'); //selecting input
+					$inputTextValue = $inputText.val(); //getting value from input
+					if ($inputTextValue.length > 3) {
+						$list.append('<li>' + $inputTextValue + '</li>');
+						$inputText.val('');
+					} else {
+						alert('please more than 3 symbols');
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
