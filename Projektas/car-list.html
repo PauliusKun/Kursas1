@@ -233,24 +233,25 @@
 				</div>
 			</div>
 		</main>
-
-<!--
 		<script>
-			var pickupPlace = document.getElementById('select-pickup-place').value;
-			var pickupDate = document.getElementById('pickup-date-input').value;
-			var pickupTime = document.getElementById('pickup-time-input').value;
-			var returnPlace = document.getElementById('select-return-place').value;
-			var returnDate = document.getElementById('return-date-input').value;
-			var returnTime = document.getElementById('return-time-input').value;
-			function printToCarListPage() {
-				document.getElementById('pickup-place').innerHTML = pickupPlace;
-				document.getElementById('pickup-date').innerHTML = pickupDate;
-				document.getElementById('pickup-time').innerHTML = pickupTime;
-				document.getElementById('return-place').innerHTML = returnPime;
-				document.getElementById('return-date').innerHTML = returnDate;
-				document.getElementById('return-time').innerHTML = returnTime;
+			function getCookie(cname) {
+				var name = cname + "=";
+				var decodedCookie = decodeURIComponent(document.cookie);
+				var ca = decodedCookie.split(';');
+				for(var i = 0; i <ca.length; i++) {
+					var c = ca[i];
+					while (c.charAt(0) == ' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length);
+					}
+				}
+			return "";
+			}
+			function getCookie() {
+				document.getElementById('pickup-place').innerHTML = city;
 			}
 		</script>
--->
 	</body>
 </html>

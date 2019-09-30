@@ -386,14 +386,13 @@
 		var returnTime = document.getElementById('return-time-input').value;
 
 		function setCookie(cname,cvalue,exdays) {
-  var d = new Date();
-  d.setTime(d.getTime() + (exdays*24*60*60*1000));
-  var expires = "expires=" + d.toGMTString();
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
+			var d = new Date();
+			d.setTime(d.getTime() + (exdays*24*60*60*1000));
+			var expires = "expires=" + d.toGMTString();
+			document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+		}
 		function saveValuesToCookies {
-			setCookie('city', pickupDate, 31);
-			setCookie('date', pickupDate, 31);
+			setCookie('city', pickupPlace, 31);
 		}
 	</script>
     </body>
