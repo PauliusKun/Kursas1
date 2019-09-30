@@ -1,0 +1,98 @@
+.car-rental-period {
+	color: #11999E;
+	font-size: 12px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.car-rental-period div {
+	margin: 0 20px;
+}
+
+.car-rental-period h5 {
+	text-align: center;
+	font-size: 14px;
+}
+
+.car-rental-period h6 {
+	text-align: center;
+	cursor: pointer;
+	font-size: 10px;
+	text-decoration: none;
+}
+
+.car-rental-period a:any-link {
+	color: #11999E;
+}
+
+
+.display-inline {
+	display: flex;
+}
+
+.display-inline span {
+	margin: 0 5px;
+}
+
+.car-offer-bar {
+	color: #11999E;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.car-offer-bar img {
+	width: 250px;
+}
+
+#white-background {
+	background-color: #ffffff;
+}
+
+.car-offer-bar h4 {
+	text-align: left;
+}
+
+.car-offer-bar div {
+	margin: 0 20px;
+	padding-top: 30px;
+
+}
+
+.car-offer-bar td {
+	vertical-align: text-bottom;
+}
+
+#continue-with-pay-now, #continue-with-pay-later {
+	cursor: pointer;
+}
+
+@media all and (max-width: 940px) {
+	.car-offer-bar {
+		flex-flow: row wrap;
+		font-size: 80%;
+	}
+}
+
+@media all and (max-width: 600px) {
+	.car-offer-bar {
+		flex-flow: row wrap;
+		font-size: 50%;
+	}
+	.car-offer-bar button {
+		font-size: 9px;
+	}
+	.car-rental-period {
+		text-align: center;
+		font-size: 60%;
+		flex-flow: column wrap;
+		margin: 0 auto;
+	}
+	.car-rental-period div {
+		justify-content: center;
+	}
+}
+
+
