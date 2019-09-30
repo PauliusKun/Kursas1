@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>2a užduotis | jQuery 2 | 10a paskaita</title>
+	<sript src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></sript>
+	<style>
+	       /* Active tab link style */
+	       a:link.active,
+	       .active {
+	         color: black;
+	         font-weight: bold;
+	         text-decoration: none;
+	       }
+
+	       /* Non-tab-related styles */
+	       body {
+	         padding: 50px;
+	         font-size: 16pt;
+	       }
+
+	       a:link {
+	         color: blue;
+	       }
+	</style>
+</head>
+<body>
+	<p>Tab'ai. Demo sukurimas. El. parduotuvės prekės puslapis.</p>
+	<div class='tab-panel'>
+		<!-- Our focus -->
+		<div class='tabs'>
+			<!-- Tab navigation -->
+			<a href='#tab1'>Aprašymas</a> <a href='#tab2'>Specifikacija</a> <a href='#tab3'>Užklausa</a>
+		</div><!-- turinys papkuciu -->
+		<div class='tab-content' id='tab1'>
+			<h2>Apie šį pieną aprašymas</h2>
+			<p>Turinys čia.</p>
+		</div>
+		<div class='tab-content' id='tab2'>
+			<h2>Sudedamosios dalys pienos</h2>
+			<p>Turinys čia.</p>
+		</div>
+		<div class='tab-content' id='tab3'>
+			<h2>Kiek norite šio pieno?</h2>
+			<p>Turinys čia.</p>
+		</div><!-- PABAIGA turinio papkuciu -->
+	</div>
+
+    <script>
+        // atlikti:
+        /*
+            1. pagal nutylejima paslepti visus tab'us
+            2. Rodyti tik pirmaji tab'a
+            3. indikuoti kad pirmas tab'as aktyvus
+            4. paspaudus kita taba paslepti visus tabus
+            5. rodyti tik pasirinkta / paspausta tab'a.
+            6. isjungti standartini narsykles veiksma (click'ui)
+        */
+		$(document).ready(function () {
+			//1.
+			$('.tab-content').hide();
+
+			//2.
+			$('.tab-content:first').fadeIn();
+
+			//3.
+			$('.tabs > a').removeClass('active');
+			$('.tabs > a:first').addClass('active');
+
+			//4.
+			$('.tabs > a').click(function () {
+				var href = $(this).attr('href');
+
+				$(.'tab-content').hide();
+
+				//5.
+				$(href).show();
+				$('.tabs > a').removeClass('active');
+				$('.tabs > a[href=' + href + ']:first').addClass('active');
+
+			//5.
+			});
+				return false;
+		});
+
+
+
+    </script>
+</body>
+</html>

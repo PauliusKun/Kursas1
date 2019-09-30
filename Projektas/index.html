@@ -180,7 +180,7 @@
 							</select>
 						</div>
 						<div class="button-place">
-							<button class="button" type="submit" onclick="printToCarListPage()">Ieškoti pasiūlymo</button>
+							<button class="button" type="submit" onclick="saveValuesToCookies();">Ieškoti pasiūlymo</button>
 						</div>
 					</form>
 				</div>
@@ -384,13 +384,16 @@
 		var returnPlace = document.getElementById('select-return-place').value;
 		var returnDate = document.getElementById('return-date-input').value;
 		var returnTime = document.getElementById('return-time-input').value;
-		function printToCarListPage() {
-			document.getElementById('pickup-place').innerHTML = pickupPlace;
-			document.getElementById('pickup-date').innerHTML = pickupDate;
-			document.getElementById('pickup-time').innerHTML = pickupTime;
-			document.getElementById('return-place').innerHTML = returnPime;
-			document.getElementById('return-date').innerHTML = returnDate;
-			document.getElementById('return-time').innerHTML = returnTime;
+
+		function setCookie(cname,cvalue,exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires=" + d.toGMTString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+		function saveValuesToCookies {
+			setCookie('city', pickupDate, 31);
+			setCookie('date', pickupDate, 31);
 		}
 	</script>
     </body>
