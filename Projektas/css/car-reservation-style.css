@@ -33,9 +33,17 @@ body {
 	font-size: 12px;
 }
 
+.customer-form {
+	border-left: 1px solid grey;
+}
+
 .customer-form h5 {
 	text-align: center;
 	margin-top: 0;
+}
+
+.payment-block-title h5 {
+	text-align: center;
 }
 
 .customer-form span {
@@ -60,6 +68,33 @@ body {
 }
 
 .payment {
+/*	border: 1px solid black;*/
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+
+.button2 {
+	background: #11cdd4;
+	background-image: linear-gradient(to bottom, #11cdd4, #11999e);
+  	font-family: 'Montserrat', sans-serif;
+  	font-size: 15px;
+  	color: #ffffff;
+  	text-decoration: none;
+	cursor: pointer;
+  	padding: 10px 20px;
+  	border: none;
+	border-radius: 8px;
+}
+
+.button2:hover {
+  	background: #30e3cb;
+  	background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+  	text-decoration: none;
+}
+
+.confirm-and-submit {
+	border: 1px solid black;
 	text-align: center;
 	display: flex;
 }

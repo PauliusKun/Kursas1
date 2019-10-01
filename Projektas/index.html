@@ -118,7 +118,7 @@
 						</div>
 						<label for="choose-return-place">Grąžinimas</label>
 						<div class="select-date-and-time">
-							<select class="select-return-place" name="return-place">
+							<select id="select-return-place" class="select-return-place" name="return-place">
 								<option value="nothing-choose" hidden>Grąžinimo vieta</option>
 								<option value="Vilniaus ofisas, Priegliaus 17">Vilniaus ofisas, Priegliaus 17</option>
 								<option value="Vilniaus Oro Uostas (VNO)">Vilniaus Oro Uostas (VNO)</option>
@@ -129,8 +129,8 @@
 							<input id="return-date-input" class="date-input" type="date" name="date" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
 							<select id="return-time-input" class="select-time" name="time">
 								<option value="" hidden>Laikas</option>
-								<option value="00:00">00:00</option>
-								<option value="00:30">00:30</option>
+								<option>00:00</option>
+								<option>00:30</option>
 								<option>01:00</option>
 								<option>01:30</option>
 								<option>02:00</option>
@@ -374,7 +374,7 @@
 		  	slideIndex++;
 		  	if (slideIndex > slides.length) {slideIndex = 1}
 		  	slides[slideIndex-1].style.display = "block";
-		  	setTimeout(showSlides, 6000); // Change image every 2 seconds
+		  	setTimeout(showSlides, 6000);
 		}
 	</script>
 	<script>
@@ -391,8 +391,13 @@
 			var expires = "expires=" + d.toGMTString();
 			document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 		}
-		function saveValuesToCookies {
+		function saveValuesToCookies() {
 			setCookie('city', pickupPlace, 31);
+			setCookie('date', pickupDate, 31);
+			setCookie('time', pickupTime, 31);
+			setCookie('backCity', returnPlace, 31);
+			setCookie('backDate', returnDate, 31);
+			setCookie('backTime', returnTime, 31);
 		}
 	</script>
     </body>

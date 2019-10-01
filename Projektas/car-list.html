@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="css/car-list-style.css" type="text/css">
 		<link rel="icon" href="images/favicon.ico">
     </head>
-    <body>
+    <body onload="getCookieAndWriteValue()">
 
 					<!-- 1. Header -->
 
@@ -241,6 +241,7 @@
 			</div>
 		</main>
 		<script>
+
 			function getCookie(cname) {
 				var name = cname + "=";
 				var decodedCookie = decodeURIComponent(document.cookie);
@@ -256,8 +257,22 @@
 				}
 			return "";
 			}
-			function getCookie() {
+			function getCookieAndWriteValue() {
+				//var city = pickupPlace;
+				city = getCookie('city');
+				date = getCookie('date');
+				time = getCookie('time');
+				backCity = getCookie('backCity');
+				backDate = getCookie('backDate');
+				backTime = getCookie('backTime');
 				document.getElementById('pickup-place').innerHTML = city;
+				document.getElementById('pickup-date').innerHTML = date;
+				document.getElementById('pickup-time').innerHTML = time;
+				document.getElementById('return-place').innerHTML = backCity;
+				document.getElementById('return-date').innerHTML = backDate;
+				document.getElementById('return-time').innerHTML = backTime;
+
+				//document.getElementById('pickup-place').innerHTML = city;
 			}
 		</script>
 	</body>
