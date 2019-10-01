@@ -24,6 +24,7 @@ body {
 
 .header-flex {
     font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
     color: #ffffff;
     background-color:#66BFBF;
     text-align:center;
@@ -67,12 +68,18 @@ body {
 		padding: 10px;
 		justify-content: center;
 	}
+	.header-flex-2 {
+		flex-flow: wrap;
+		padding: 10px;
+		justify-content: center;
+	}
 	.select-language select{
 	margin: 10px;
 	}
 }
 
 .nav-bar {
+	background-color: #EAF6F6;
 	height: 70px;
 	align-items:center;
 	display: flex;

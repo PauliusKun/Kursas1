@@ -1,7 +1,11 @@
-#car-reservation-form {
+body {
 	background-color: #ffffff;
-	border: 1px solid black;
 }
+
+/*
+#car-reservation-form {
+}
+*/
 
 #car-details {
 	display: flex;
@@ -13,6 +17,7 @@
 #car-details div {
 /*	border: 1px solid black;*/
 	margin: 10px;
+	width: 260px;
 }
 
 #car-details img {
@@ -27,3 +32,35 @@
 .included-in-price-table td {
 	font-size: 12px;
 }
+
+.customer-form h5 {
+	text-align: center;
+	margin-top: 0;
+}
+
+.customer-form span {
+	color: red;
+}
+
+.customer-form div, .payment div {
+	margin: 5px 10px;
+}
+
+.form-row {
+	display: flex;
+}
+
+.requirements {
+	text-align: center;
+}
+
+.requirements textarea {
+	width: 360px;
+	height: 50px;
+}
+
+.payment {
+	text-align: center;
+	display: flex;
+}
+
