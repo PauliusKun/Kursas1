@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>
+			JS5 | JQ3 | Cookie set, get, check
+		</title>
+	</head>
+	<body onload="playWithCookie()">
+        <script>
+            function setCookie(cname, cvalue, exdays) {
+                var d = new Date();
+                d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+                var expires = "expires=" + d.toUTCString();
+                document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+            }
+
+            function getCookie(cname) {
+                var name = cname + "=";
+                var decodedCookie = decodeURIComponent(document.cookie);
+                var ca = decodedCookie.split(';');
+                for (var i = 0; i < ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
+
+            function playWithCookie() {
+
+                // TODO
+                // Create variable for cookie. Get cookie value
+                // Write if sentence to check. if userName is not empty alert that user name
+                // else use setCookie() function to write cookie.
+                // make check (if sentence) to check does entered prompt text is not empty + typeOf is string.
+                // extra: check does person pressed cancel (not null).
+				var username = getCookie('username');
+
+				if (username != '') {
+					alert('Welcome, ' + username);
+				} else {
+					username = prompt('Please enter your name');
+					if (username != '' & username != null) {
+					setCookie('username', 'Paulius', 7);
+					}
+				}
+            }
+		</script>
+	</body>
+</html>

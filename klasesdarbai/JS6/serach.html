@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+	</head>
+	<body>
+		<div id="main">
+			<h1>Search/sorting</h1>
+			<p>Let's filter items by keyword</p>
+			<input type="text" id="input-text" placeholder="Enter search word">
+			<table id="search-data">
+				<tr>
+					<th>Name</th>
+					<th>Last name</th>
+					<th>Age</th>
+				</tr>
+				<tr>
+					<td>Paulius</td>
+					<td>Kundrutas</td>
+					<td>33</td>
+				</tr>
+				<tr>
+					<td>Nasveldas</td>
+					<td>Opapa</td>
+					<td>13</td>
+				</tr>
+				<tr>
+					<td>Andrius</td>
+					<td>Labanauskas</td>
+					<td>22</td>
+				</tr>
+				<tr>
+					<td>Asmentas</td>
+					<td>Audenas</td>
+					<td>11</td>
+				</tr>
+			</table>
+		</div>
+		<script>
+			$(document).ready(function () {
+				$('#input-text').on('keyup', function () {
+					var $value = $(this).val(); //Paulius
+					$value = $value.toLowerCase();
+
+					$('#search-data tr').filter(function () {
+						$(this).toggle(
+							$(this).text().toLowerCase().indexOf($value) > -1);
+					});
+				});
+			});
+		</script>
+	</body>
+</html>
