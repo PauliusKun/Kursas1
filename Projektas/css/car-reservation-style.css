@@ -1,61 +1,72 @@
 body {
 	background-color: #ffffff;
+	color: #66BFBF;
 }
 
-/*
-#car-reservation-form {
-}
-*/
-
-#car-details {
+#car-and-price-details {
 	display: flex;
 	justify-content: center;
 	flex-direction: row;
 	flex-flow: row wrap;
 }
 
-#car-details div {
-/*	border: 1px solid black;*/
-	margin: 10px;
-	width: 260px;
-}
-
-#car-details img {
+#car-and-price-details img {
 	width: 250px;
 }
 
-#other-details {
+.car-details {
+	margin-top: 20px;
 	display: flex;
+}
+
+.car-details span, h5 {
+	margin: 10px 5px;
+}
+
+.included-and-extras {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: center;
 }
 
-.included-in-price-table td {
-	font-size: 12px;
+.included-and-extras div {
+	margin: 0 20px;
 }
 
-.customer-form {
-	border-left: 1px solid grey;
+#information-and-payment-block {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
-.customer-form h5 {
+.customer-information-form, .payment-block {
+	margin: 30px 10px;
+/*	padding: 0 20px;*/
+}
+
+.customer-information-form div {
+	margin: 5px 10px;
+}
+
+.customer-information-form h5, .payment-block h5 {
 	text-align: center;
 	margin-top: 0;
 }
 
-.payment-block-title h5 {
-	text-align: center;
-}
-
-.customer-form span {
+.customer-information-form span:last-child {
 	color: red;
 }
 
-.customer-form div, .payment div {
-	margin: 5px 10px;
+.input-border-radius {
+	font-size: 16px;
+	border-radius: 4px;
 }
 
 .form-row {
 	display: flex;
+	justify-content: center;
 }
 
 .requirements {
@@ -63,15 +74,35 @@ body {
 }
 
 .requirements textarea {
-	width: 360px;
-	height: 50px;
+	width: 95%;
+	font-size: 14px;
+	border-radius: 4px;
+}
+
+.payment-block h5 {
+	text-align: center;
+}
+
+@media all and (max-width: 600px) {
+	.customer-information-form {
+
+	}
+	.included-and-extras div {
+		margin: 10px 20px;
+	}
+	.car-details  {
+		font-size: 12px;
+	}
 }
 
 .payment {
-/*	border: 1px solid black;*/
 	text-align: center;
 	display: flex;
 	justify-content: center;
+}
+
+.payment input {
+	margin-right: 30px;
 }
 
 .button2 {

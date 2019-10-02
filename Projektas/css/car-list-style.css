@@ -13,8 +13,9 @@
 }
 
 .nav-bar {
-	padding: 0;
 	background-color: #ffffff;
+	margin:0 20px;
+	padding: 0;
 }
 
 .car-rental-period {
@@ -46,7 +47,6 @@
 	color: #11999E;
 }
 
-
 .display-inline {
 	display: flex;
 }
@@ -57,6 +57,7 @@
 
 .car-offer-bar {
 	color: #11999E;
+	height: 200px;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -73,26 +74,36 @@
 
 .car-offer-bar h4 {
 	text-align: left;
+	margin-top: 5px;
 }
 
 .car-offer-bar div {
-	margin: 0 20px;
-	padding-top: 30px;
-
+	margin: 10px 5px 0 5px;
 }
 
-.car-offer-bar td {
-	vertical-align: text-bottom;
+.about-car, .about-price {
+	display: flex;
+	margin: 0;
+	align-items: center;
+}
+
+.about-price span {
+	margin: 10px 5px;
+	align-items: center;
+	vertical-align: bottom;
+}
+
+.about-price button {
+	margin: 0;
 }
 
 #continue-with-pay-now {
 	cursor: pointer;
 }
 
-@media all and (max-width: 940px) {
+@media all and (max-width: 800px) {
 	.car-offer-bar {
 		flex-flow: row wrap;
-		font-size: 80%;
 	}
 }
 
@@ -100,17 +111,13 @@
 	.header-flex {
 		display: none;
 	}
-	.header-flex-2 {
+	.header-flex-2, .nav-bar {
 		justify-content: center;
+		font-size: 12px;
 	}
 	.car-offer-bar {
 		flex-flow: row wrap;
-	}
-	.car-offer-bar img {
-		width: 80%;
-	}
-	.car-offer-bar div {
-		padding: 0;
+		height: auto;
 	}
 	.car-offer-bar button {
 		font-size: 12px;

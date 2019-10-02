@@ -43,143 +43,141 @@
 
 		<main>
 			<div id="car-reservation-form">
-				<h4>Automobilio rezervacija</h4>
-				<div id="car-details">
+				<div>
+					<h4>Automobilio rezervacija</h4>
+				</div>
+				<div id="car-and-price-details">
 					<div >
 						<img src="images/toyota-yaris.jpg" alt="toyota-yaris">
 					</div>
-					<div>
-						<h5>Ekonominė: Toyota Yaris Hybrid ar pan.</h5>
-						<table>
-							<tr>
-								<td>Paėmimas:</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>Grąžinimas:</td>
-								<td></td>
-							</tr>
-							<tr></tr>
-							<tr>
-								<td>Nuomos trukmė:</td>
-								<td></td>
-							</tr>
-						</table>
+					<div class="car-details">
+						<div>
+							<span><h5>Ekonominė:</h5></span>
+							<span>Paėmimas:</span><br>
+							<span>Grąžinimas:</span><br>
+							<span>Trukmė:</span>
+						</div>
+						<div>
+							<span><h5>Toyota Yaris ar pan.</h5></span>
+							<span>
+								<span id="pickup-place">Vilniaus oro uostas (VNO)</span>
+								<span id="pickup-date">2019-10-10</span>
+								<span id="pickup-time">15:30</span>
+							</span><br>
+							<span>
+								<span id="return-place">Vilniaus oro uostas (VNO)</span>
+								<span id="return-date">2019-10-20</span>
+								<span id="return-time">15:30</span><br>
+							</span>
+							<span>2 paros</span>
+						</div>
 					</div>
-					<div>
-						<h5>Kainos santrauka</h5>
-						<table>
-							<tr>
-								<td>Automobilio kaina parai:</td>
-								<td>20</td>
-								<td>€</td>
-							</tr>
-							<tr>
-								<td>Papildomai:</td>
-								<td>0</td>
-								<td>€</td>
-							</tr>
-							<tr></tr>
-							<tr>
-								<td><b>Suma iš viso:</b></td>
-								<td><b>40</b></td>
-								<td><b>€</b></td>
-							</tr>
-						</table>
+<!--
+					<div class="sum-details">
+						<div>
+							<span><h5>Kainos santrauka</h5></span>
+							<span>Automobilio kaina parai:</span><br>
+							<span>Papildomai:</span><br>
+							<span><b>Suma iš viso:</b></span>
+						</div>
+						<div>
+							<span><h5></h5></span><br>
+							<span>20</span><br>
+							<span>0</span><br>
+							<span>40</span>
+						</div>
+						<div>
+							<span><h5></h5></span><br>
+							<span>€</span><br>
+							<span>€</span><br>
+							<span>€</span>
+						</div>
 					</div>
+-->
 				</div>
-				<form id="other-details">
-					<div id="table-and-payment">
-						<div class="included-in-price-table">
-							<table>
-								<tr>
-									<td>Į kainą įskaičiuota</td>
-									<td>Papildomai</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" checked>Kasko draudimas (frančizė - 400€)</td>
-									<td><input type="checkbox">Kasko draudimas (frančizė - 0€)(10€/para)</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" checked>Privalomas draudimas</td>
-									<td><input type="checkbox">Papildomas vairuotojas (5€/para)</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" checked>400 km/para rida (papildomas km – 0,10€)</td>
-									<td><input type="checkbox">Neribota rida (10€/para)</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" checked>24/7 pagalba kelyje</td>
-									<td><input type="checkbox">Wi-Fi (3€/para)</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox">GPS (nemokamai)</td>
+				<form id="order-details">
+					<div class="included-and-extras">
+						<div>
+							<spam>Į kainą įskaičiuota</spam><br><br>
+							<spam><input type="checkbox" checked>Kasko draudimas (frančizė - 400€)</spam><br>
+							<spam><input type="checkbox" checked>Privalomas draudimas</spam><br>
+							<spam><input type="checkbox" checked>400 km/para rida (papildomas km – 0,10€)</spam><br>
+							<spam><input type="checkbox" checked>24/7 pagalba kelyje</spam><br>
+							<spam><input type="checkbox">Vaikiška kėdutė (nemokamai)</spam><br>
+							<spam><input type="checkbox">GPS (nemokamai)</spam>
+						</div>
+						<div>
+							<spam>Papildomai</spam><br><br>
+							<spam><input type="checkbox">Kasko draudimas (frančizė - 0€)(10€/para)</spam><br>
+							<spam><input type="checkbox">Papildomas vairuotojas (5€/para)</spam><br>
+							<spam><input type="checkbox">Neribota rida (10€/para)</spam><br>
+							<spam><input type="checkbox">Wi-Fi (3€/para)</spam>
+						</div>
+					</div>
+					<div id="information-and-payment-block">
+						<div class="customer-information-form">
+							<span><h5>Vairuotojo informacija</h5></span>
+							<div class="form-row">
+								<div>
+									<label for="first-name"><span>*</span>Vardas:</label><br>
+									<input id="first-name" class="input-border-radius" type="text" name="first-name" value>
+								</div>
+								<div>
+									<label for="second-name"><span>*</span>Pavardė:</label><br>
+									<input id="second-name" class="input-border-radius" type="text" name="second-name" value>
+								</div>
+							</div>
+							<div class="form-row">
+								<div>
+									<label for="telephone"><span>*</span>Telefonas:</label><br>
+									<input id="telephone-number" class="input-border-radius" type="tel" name="telephone" value>
+								</div>
+								<div>
+									<label for="mail"><span>*</span>El.paštas:</label><br>
+									<input id="mail-address" class="input-border-radius" type="email" name="mail" value>
+								</div>
+							</div>
+							<div class="form-row">
+								<div>
+									<label for="birthday"><span>*</span>Gimimo data:</label><br>
+									<input id="birthday" class="input-border-radius" type="text" name="birthday" value>
+								</div>
+								<div>
+									<label for="flight-number">Skrydžio numeris:</label><br>
+									<input id="flight-number" class="input-border-radius" type="text" name="flight" value>
+								</div>
+							</div>
+							<div class="requirements">
+								<label for="requirements">Pageidavimai:</label><br>
+								<textarea name="requirements" id="requirements"></textarea>
+							</div>
+						</div>
+						<div class="payment-block">
+							<span><h5>Apmokėjimas</h5></span>
+							<div class="payment">
+								<div>
+									<label for="paypal">Paypal</label>
+									<input id="paypal" type="radio" name="paypal" value>
+								</div>
+								<div>
+									<label for="credit-card">Banko kortele</label>
+									<input id="credit-card" type="radio" name="credit-card" value>
+								</div>
+								<div>
+									<label for="pay-later">Mokėti atsiimant</label>
+									<input id="pay-later" type="radio" name="pay-later" value>
+								</div>
+							</div>
+						</div>
 
-								</tr>
-								<tr>
-									<td><input type="checkbox">Vaikiška kėdutė (nemokamai)</td>
-									<td><small>Pažymėkite reikalingus laukelius</small></td>
-								</tr>
-							</table>
-						</div>
-						<div class="payment-block-title">
-							<h5>Apmokėjimas</h5>
-						</div>
-						<div class="payment">
-							<div>
-								<label for="paypal">Paypal</label>
-								<input id="paypal" type="radio" name="paypal" value>
-							</div>
-							<div>
-								<label for="credit-card">Banko kortele</label>
-								<input id="credit-card" type="radio" name="credit-card" value>
-							</div>
-							<div>
-								<label for="pay-later">Mokėti atsiimant</label>
-								<input id="pay-later" type="radio" name="pay-later" value>
-							</div>
-						</div>
+
+
+<!--
 						<div class="confirm-and-submit">
 							<p><small>Spausdamas "Užsakyti" - patvirtinu, kad susipažinau ir sutinku su Bluerent nuomos sąlygomis.</small></p>
 							<button class="button2" type="submit">Užsakyti</button>
 						</div>
-					</div>
-					<div class="customer-form">
-						<h5>Vairuotojo informacija</h5>
-						<div class="form-row">
-							<div>
-								<label for="first-name"><span>*</span>Vardas:</label><br>
-								<input id="first-name" type="text" name="first-name" value>
-							</div>
-							<div>
-								<label for="second-name"><span>*</span>Pavardė:</label><br>
-								<input id="second-name" type="text" name="second-name" value>
-							</div>
-						</div>
-						<div class="form-row">
-							<div>
-								<label for="telephone"><span>*</span>Telefonas:</label><br>
-								<input id="telephone-number" type="tel" name="telephone" value>
-							</div>
-							<div>
-								<label for="mail"><span>*</span>El.paštas:</label><br>
-								<input id="mail-address" type="email" name="mail" value>
-							</div>
-						</div>
-						<div class="form-row">
-							<div>
-								<label for="birthday"><span>*</span>Gimimo data:</label><br>
-								<input id="birthday" type="text" name="birthday" value>
-							</div>
-							<div>
-								<label for="flight-number">Skrydžio numeris:</label><br>
-								<input id="flight-number" type="text" name="flight" value>
-							</div>
-						</div>
-						<div class="requirements">
-							<label for="requirements">Pageidavimai:</label><br>
-							<textarea name="requirements" id="requirements"></textarea>
-						</div>
+-->
 					</div>
 				</form>
 			</div>
