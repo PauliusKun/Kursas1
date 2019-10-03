@@ -3,6 +3,10 @@ body {
 	color: #66BFBF;
 }
 
+h4 {
+	text-align: center;
+}
+
 #car-and-price-details {
 	display: flex;
 	justify-content: center;
@@ -67,6 +71,8 @@ body {
 .form-row {
 	display: flex;
 	justify-content: center;
+	flex-direction: ;
+	flex-wrap: wrap;
 }
 
 .requirements {

@@ -13,32 +13,29 @@
 
 					<!-- 1. Header -->
 
-        <header id="header" class="header-flex">
-            <div class="logo">
-				<img src="images/bluerent-logo.svg" alt="logo">
+		<header id="header" >
+			<div class="first-header-block">
+				<div class="top-telephone-and-mail">
+					<div>
+						<img class="hours-icon" src="images/hours-support-icon.svg" alt="hours-icon">
+					</div>
+					<div>
+						<p>+37068663132</p>
+					</div>
+					<div>
+						<img class="mail-icon" src="images/eta-icon.svg" alt="mail-icon">
+					</div>
+					<div>
+						<p>info@bluerent.lt</p>
+					</div>
+				</div>
+				<div class="select-language">
+					<select>
+						<option value="LT">LT</option>
+						<option value="EN">EN</option>
+					</select>
+				</div>
 			</div>
-			<div class="top-telephone-and-mail">
-				<div>
-					<img class="hours-icon" src="images/hours-support-icon.svg" alt="hours-icon">
-				</div>
-				<div>
-					<p>+37068663132</p>
-				</div>
-				<div>
-					<img class="mail-icon" src="images/eta-icon.svg" alt="mail-icon">
-				</div>
-				<div>
-					<p>info@bluerent.lt</p>
-				</div>
-			</div>
-            <div class="select-language">
-                <select>
-                    <option value="LT">LT</option>
-                    <option value="EN">EN</option>
-                </select>
-            </div>
-        </header>
-
 					<!--3. Main-->
 
 		<main>
@@ -60,7 +57,7 @@
 						<div>
 							<span><h5>Toyota Yaris ar pan.</h5></span>
 							<span>
-								<span id="pickup-place">Vilniaus oro uostas (VNO)</span>
+								<span id="pickup-place" title="Vilniaus Oro Uostas">VNO</span>
 								<span id="pickup-date">2019-10-10</span>
 								<span id="pickup-time">15:30</span>
 							</span><br>
@@ -182,5 +179,38 @@
 				</form>
 			</div>
 		</main>
+		<script>
+
+			function getCookie(cname) {
+				var name = cname + "=";
+				var decodedCookie = decodeURIComponent(document.cookie);
+				var ca = decodedCookie.split(';');
+				for(var i = 0; i <ca.length; i++) {
+					var c = ca[i];
+					while (c.charAt(0) == ' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length);
+					}
+				}
+			return "";
+			}
+			function getCookieAndWriteValue() {
+				//var city = pickupPlace;
+				city = getCookie('city');
+				date = getCookie('date');
+				time = getCookie('time');
+				backCity = getCookie('backCity');
+				backDate = getCookie('backDate');
+				backTime = getCookie('backTime');
+				document.getElementById('pickup-place').innerHTML = city;
+				document.getElementById('pickup-date').innerHTML = date;
+				document.getElementById('pickup-time').innerHTML = time;
+				document.getElementById('return-place').innerHTML = backCity;
+				document.getElementById('return-date').innerHTML = backDate;
+				document.getElementById('return-time').innerHTML = backTime;
+			}
+		</script>
 	</body>
 </html>

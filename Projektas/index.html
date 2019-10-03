@@ -11,40 +11,44 @@
 		
 					<!-- 1. Header -->
 		
-        <header id="header" class="header-flex">
-            <div class="logo">
-				<img src="images/bluerent-logo.svg" alt="logo">
+		<header id="header" >
+			<div class="first-header-block">
+				<div class="top-telephone-and-mail">
+					<div>
+						<img class="hours-icon" src="images/hours-support-icon.svg" alt="hours-icon">
+					</div>
+					<div>
+						<p>+37068663132</p>
+					</div>
+					<div>
+						<img class="mail-icon" src="images/eta-icon.svg" alt="mail-icon">
+					</div>
+					<div>
+						<p>info@bluerent.lt</p>
+					</div>
+				</div>
+				<div class="select-language">
+					<select>
+						<option value="LT">LT</option>
+						<option value="EN">EN</option>
+					</select>
+				</div>
 			</div>
-			<div class="top-telephone-and-mail">
-				<div>
-					<img class="hours-icon" src="images/hours-support-icon.svg" alt="hours-icon">
-				</div>
-				<div>
-					<p>+37068663132</p>
-				</div>
-				<div> 
-					<img class="mail-icon" src="images/eta-icon.svg" alt="mail-icon">
-				</div>
-				<div>
-					<p>info@bluerent.lt</p>
-				</div>
-			</div>
-            <div class="select-language">
-                <select>
-                    <option value="LT">LT</option>
-                    <option value="EN">EN</option>
-                </select>
-            </div>
-        </header>
         
-					<!-- 2. Nav bar -->
+					<!-- 1.2 Nav bar -->
 		
-        <nav id="nav-bar" class="nav-bar">
-            <div><a href="#about">Apie mus</a></div>
-            <div><a href="#services">Paslaugos</a></div>
-            <div><a href="documents/salygos.pdf" target="_blank">Sąlygos</a></div>
-            <div><a href="#contacts">Kontaktai</a></div>
-        </nav>
+			<div class="second-header-block">
+				<div class="logo">
+					<img src="images/bluerent-logo.svg" alt="bluerent" title="bluerent - hibridiniu ir elektriniu automobiliu nuoma">
+				</div>
+				<nav id="nav-bar" class="nav-bar">
+					<div><a href="index.html#about">Apie mus</a></div>
+					<div><a href="index.html#services">Paslaugos</a></div>
+					<div><a href="documents/salygos.pdf" target="_blank">Sąlygos</a></div>
+					<div><a href="index.html#contacts">Kontaktai</a></div>
+				</nav>
+			</div>
+		</header>
 		        
 					<!--3. Article -->
 		
@@ -179,7 +183,7 @@
 								<option>23:30</option>
 							</select>
 						</div>
-						<div class="button-place">
+						<div>
 							<button class="button" type="submit" onclick="saveValuesToCookies();">Ieškoti pasiūlymo</button>
 						</div>
 					</form>
@@ -190,17 +194,14 @@
 				<aside class="banner-window">
 					<div class="slideshow-container">
   						<div class="mySlides fade">
-							<!--    <div class="numbertext">1 / 3</div>-->
     						<img src="images/hybrid-car-1.jpg" style="width:100%">
     						<div class="text">Platus hibridinių automobilių pasirinkimas</div>
   						</div>
   						<div class="mySlides fade">
-							<!--    <div class="numbertext">2 / 3</div>-->
     						<img src="images/hybrid-car-2.jpg" style="width:100%">
     						<div class="text">Gausi komplektacija ir nemokama papildoma įranga</div>
   						</div>
   						<div class="mySlides fade">
-							<!--    <div class="numbertext">3 / 3</div>-->
     						<img src="images/hybrid-car-3.jpg" style="width:100%">
     						<div class="text">Taupūs bei stilingi krosoveriai ir visureigiai </div>
   						</div>
@@ -209,15 +210,9 @@
   						<a class="next" onclick="plusSlides(1)">&#10095;</a>
 -->
 					</div>
-					<br>
-					<!--
-					<div>
-					  <span class="dot" onclick="currentSlide(1)"></span>
-					  <span class="dot" onclick="currentSlide(2)"></span>
-					  <span class="dot" onclick="currentSlide(3)"></span>
-					</div>
-					-->
+
 					<!---------------------------->
+
 				</aside>
 			</article>
 			<div class="benefits">
@@ -238,80 +233,102 @@
 		
 					<!--Section1 About us-->
 		
-		<section id="about" class="about-us">
-			<div>
-				<h3>Apie mus</h3>
-			</div>
-			<div>
-				<p><b>Bluerent</b> – novatoriška įmonė, teikianti trumpalaikę bei igalaikę hibridinių ir elektrinių automobilių nuomą. Išanalizavome rinką, dabartinę situaciją ir klientų lūkesčius todėl Jums pasiūlysime profesionalias, aukštos kokybės paslaugas bei modernius, naujos kartos automobilius. Su Bluerent automobiliais ne tik sutaupysite, bet ir tausosite gamtą.</p>
-				<p><b>Mūsų vertybės:</b> patikimumas, lojalumas, lankstumas, darbuotojų profesionalumas, bei kliento šypsena.</p>
-			</div>
-			<h4>Mus verta rinktis nes:</h4>
-			<div class="advantages-list">
+		<section id="about">
+			<div class="about-us">
 				<div>
-					<ul>
-						<li>Nauji, patikimi bei taupūs automobiliai</li>
-						<li>Gera automobilių komplektacija</li>
-						<li>Greita ir patogi rezervacija</li>
-						<li>Profesionalus ir greitas aptarnavimas</li>
-						<li>Rezervacijos keitimas/atšaukimas</li>
-						<li>Pakaitinis automobilis</li>
-						<li>Informacija ir pagalba kelyje 24/7 </li>
-					</ul>
+					<h3>Apie mus</h3>
+					<p><b>Bluerent</b> – įmonė, teikianti trumpalaikę bei igalaikę hibridinių ir elektrinių automobilių nuomą. Išanalizavome rinką, dabartinę situaciją ir klientų lūkesčius todėl Jums pasiūlysime profesionalias, aukštos kokybės paslaugas bei modernius, naujos kartos automobilius. Su Bluerent automobiliais ne tik sutaupysite, bet ir tausosite gamtą.</p>
 				</div>
 				<div>
-					<ul>
-						<li>Lojalumo sistema</li>
-						<li>Lanksčios sąlygos</li>
-						<li>Civilinės atsakomybės draudimas</li>
-						<li>Mažas depozitas</li>
-						<li>Nėra oro uosto mokečio</li>
-						<li>Nemokamas automobilio pristatymas</li>
-						<li>Nemokama papildoma įranga</li>
-					</ul>
+					<p><b>Mūsų vertybės:</b> patikimumas, lojalumas, lankstumas, darbuotojų profesionalumas, bei kliento šypsena.</p>
+				</div>
+			</div>
+			<div class="advantages-list">
+				<h4>Mus verta rinktis nes:</h4>
+				<div class="tooltip">Automobiliai
+					<span class="tooltiptext">Nauji, patikimi bei taupūs automobiliai. Gera automobilių komplektacija. Civilinis ir Kasko draudimas</span>
+				</div>
+				<hr>
+				<div class="tooltip">Rezervacija
+					<span class="tooltiptext">Greita ir patogi rezervacija. Rezervacijos keitimas/atšaukimas</span>
+				</div>
+				<hr>
+				<div class="tooltip">Aptarnavimas
+					<span class="tooltiptext">Profesionalus ir greitas aptarnavimas</span>
+				</div>
+				<hr>
+				<div class="tooltip">Nauda
+					<span class="tooltiptext">Nemokamas automobilio pristatymas bei papildoma įranga</span>
+				</div>
+				<hr>
+				<div class="tooltip">Lojalumas
+					<span class="tooltiptext">Lojalumo sistema bei lanksčios sąlygos klientams</span>
+				</div>
+				<hr>
+				<div class="tooltip">Atsiskaitymas
+					<span class="tooltiptext">Patogus ir greitas atsiskaitymas. Depozitas tik 150Eur</span>
+				</div>
+				<hr>
+				<div class="tooltip">Pagalba
+					<span class="tooltiptext">Informacija ir pagalba kelyje 24/7.Pakaitinis automobilis</span>
 				</div>
 			</div>
 		</section>
 		
 					<!--Section2 Services-->
 		
-		<section id="services">
-			<div>
+		<section id="services" class="services">
 				<h3>Paslaugos</h3>
+			<div class="accordion-block">
+				<button class="accordion"><b>Trumpalaikė nuoma</b></button>
+					<div class="panel">
+						<ul>
+							<li>Nuo 1 paros iki mėnesio</li>
+							<li>Nemokamas pristatymas mieste</li>
+							<li>Nemokamas parkavimas mieste (elektromobiliai)</li>
+							<li>Pakaitinis automobilis darudiminio įykio atveju</li>
+							<li>Pagalba ir informacija visą parą</li>
+						</ul>
+					</div>
 			</div>
-			<div class="services-container">
-				<div>
-					<h4>Trumpalaikė nuoma</h4>
-					<ul>
-						<li>Nuo 1 paros iki mėnesio</li>
-						<li>Nemokamas pristatymas mieste</li>
-						<li>Nemokamas parkavimas mieste (elektromobiliai)</li>
-						<li>Pakaitinis automobilis darudiminio įykio atveju</li>
-						<li>Pagalba ir informacija visą parą</li>
-					</ul>
-				</div>
-				<div>
-					<h4>Ilgalaikė nuoma</h4>
-					<ul>
-						<li>Nuo 1 mėnesio</li>
-						<li>Periodiniai techniniai aptarnavimai</li>
-						<li>Draudiminių įvykių administravimas</li>
-						<li>Pakaitinis automobilis draudiminio įvykio atveju</li>
-						<li>Sezoninių padangų keitimas</li>
-						<li>Kartą į mėnesį - automobilio vidaus ir išorės valymas</li>
-						<li>Pagalba ir informacija visą parą</li>
-					</ul>
-				</div>
-				<div>
-					<h4>Nuoma su vairuotoju/keleivių pervežimas</h4>
-					<ul>
-						<li>Automobilis su vairuotoju</li>
-						<li>Jūsų pasirinktas automobilis, maršrutas ir laikas</li>
-						<li>Patyrę, mandagūs ir paslaugūs vairuotojai</li>
-						<li>Keleivių pasitikimas oro uoste</li>
-						<li>Fizinė klientų apsauga</li>
-					</ul>
-				</div>
+			<hr>
+			<div class="accordion-block">
+				<button class="accordion"><b>Ilgalaikė nuoma</b></button>
+					<div class="panel">
+						<ul>
+							<li>Nuo 1 mėnesio</li>
+							<li>Periodiniai techniniai aptarnavimai</li>
+							<li>Draudiminių įvykių administravimas</li>
+							<li>Pakaitinis automobilis draudiminio įvykio atveju</li>
+							<li>Sezoninių padangų keitimas</li>
+							<li>Kartą į mėnesį - automobilio vidaus ir išorės valymas</li>
+							<li>Pagalba ir informacija visą parą</li>
+						</ul>
+					</div>
+			</div>
+			<hr>
+			<div class="accordion-block">
+				<button class="accordion"><b>Nuoma su vairuotoju</b></button>
+					<div class="panel">
+						<ul>
+							<li>Automobilis su vairuotoju</li>
+							<li>Jūsų pasirinktas automobilis, maršrutas ir laikas</li>
+							<li>Galimos kelionės į užsienį</li>
+							<li>Patyrę, mandagūs ir paslaugūs vairuotojai</li>
+						</ul>
+					</div>
+			</div>
+			<hr>
+			<div class="accordion-block">
+				<button class="accordion"><b>Keleivių pervežimas</b></button>
+					<div class="panel">
+						<ul>
+							<li>Jūsų pasirinktas automobilis, maršrutas ir laikas</li>
+							<li>Keleivių pasitikimas oro uoste</li>
+							<li>Patyrę, mandagūs ir paslaugūs vairuotojai</li>
+							<li>Fizinė klientų apsauga</li>
+						</ul>
+					</div>
 			</div>
 		</section>
 		
@@ -363,44 +380,60 @@
 			</div>
 		</footer>
 
-	<script>
-		var slideIndex = 0;
-		showSlides();
+		<script>
+			var slideIndex = 0;
+			showSlides();
 
-		function showSlides() {
-		  	var i;
-		  	var slides = document.getElementsByClassName("mySlides");
-		  	for (i = 0; i < slides.length; i++) {
-			slides[i].style.display = "none";
+			function showSlides() {
+				var i;
+				var slides = document.getElementsByClassName("mySlides");
+				for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+				}
+				slideIndex++;
+				if (slideIndex > slides.length) {slideIndex = 1}
+				slides[slideIndex-1].style.display = "block";
+				setTimeout(showSlides, 4000);
 			}
-		  	slideIndex++;
-		  	if (slideIndex > slides.length) {slideIndex = 1}
-		  	slides[slideIndex-1].style.display = "block";
-		  	setTimeout(showSlides, 6000);
-		}
-	</script>
-	<script>
-		var pickupPlace = document.getElementById('select-pickup-place').value;
-		var pickupDate = document.getElementById('pickup-date-input').value;
-		var pickupTime = document.getElementById('pickup-time-input').value;
-		var returnPlace = document.getElementById('select-return-place').value;
-		var returnDate = document.getElementById('return-date-input').value;
-		var returnTime = document.getElementById('return-time-input').value;
+		</script>
+		<script>
+			var pickupPlace = document.getElementById('select-pickup-place').value;
+			var pickupDate = document.getElementById('pickup-date-input').value;
+			var pickupTime = document.getElementById('pickup-time-input').value;
+			var returnPlace = document.getElementById('select-return-place').value;
+			var returnDate = document.getElementById('return-date-input').value;
+			var returnTime = document.getElementById('return-time-input').value;
 
-		function setCookie(cname,cvalue,exdays) {
-			var d = new Date();
-			d.setTime(d.getTime() + (exdays*24*60*60*1000));
-			var expires = "expires=" + d.toGMTString();
-			document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-		}
-		function saveValuesToCookies() {
-			setCookie('city', pickupPlace, 31);
-			setCookie('date', pickupDate, 31);
-			setCookie('time', pickupTime, 31);
-			setCookie('backCity', returnPlace, 31);
-			setCookie('backDate', returnDate, 31);
-			setCookie('backTime', returnTime, 31);
-		}
-	</script>
-    </body>
+			function setCookie(cname,cvalue,exdays) {
+				var d = new Date();
+				d.setTime(d.getTime() + (exdays*24*60*60*1000));
+				var expires = "expires=" + d.toGMTString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+			function saveValuesToCookies() {
+				setCookie('city', pickupPlace, 31);
+				setCookie('date', pickupDate, 31);
+				setCookie('time', pickupTime, 31);
+				setCookie('backCity', returnPlace, 31);
+				setCookie('backDate', returnDate, 31);
+				setCookie('backTime', returnTime, 31);
+			}
+		</script>
+		<script>
+			var acc = document.getElementsByClassName("accordion");
+			var i;
+
+			for (i = 0; i < acc.length; i++) {
+				acc[i].addEventListener("click", function() {
+					this.classList.toggle("active");
+					var panel = this.nextElementSibling;
+					if (panel.style.maxHeight) {
+						panel.style.maxHeight = null;
+					} else {
+						panel.style.maxHeight = panel.scrollHeight + "px";
+					}
+				});
+			}
+		</script>
+	</body>
 </html>

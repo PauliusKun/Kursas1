@@ -12,48 +12,44 @@
 
 					<!-- 1. Header -->
 
-        <header id="header" class="header-flex">
-<!--
-            <div class="logo">
-				<img src="images/bluerent-logo.svg" alt="logo">
+		<header id="header" >
+			<div class="first-header-block">
+				<div class="top-telephone-and-mail">
+					<div>
+						<img class="hours-icon" src="images/hours-support-icon.svg" alt="hours-icon">
+					</div>
+					<div>
+						<p>+37068663132</p>
+					</div>
+					<div>
+						<img class="mail-icon" src="images/eta-icon.svg" alt="mail-icon">
+					</div>
+					<div>
+						<p>info@bluerent.lt</p>
+					</div>
+				</div>
+				<div class="select-language">
+					<select>
+						<option value="LT">LT</option>
+						<option value="EN">EN</option>
+					</select>
+				</div>
 			</div>
--->
-			<div class="top-telephone-and-mail">
-				<div>
-					<img class="hours-icon" src="images/hours-support-icon.svg" alt="hours-icon">
-				</div>
-				<div>
-					<p>+37068663132</p>
-				</div>
-				<div>
-					<img class="mail-icon" src="images/eta-icon.svg" alt="mail-icon">
-				</div>
-				<div>
-					<p>info@bluerent.lt</p>
-				</div>
-			</div>
-            <div class="select-language">
-                <select>
-                    <option value="LT">LT</option>
-                    <option value="EN">EN</option>
-                </select>
-            </div>
-        </header>
 
-					<!-- 2. Nav bar -->
+					<!-- 1.2 Nav bar -->
 
-        <header id="header2" class="header-flex-2">
-			<div class="logo">
-				<img src="images/bluerent-logo.svg" alt="logo">
+			<div class="second-header-block">
+				<div class="logo">
+					<img src="images/bluerent-logo.svg" alt="bluerent">
+				</div>
+				<nav id="nav-bar" class="nav-bar">
+					<div><a href="index.html#about">Apie mus</a></div>
+					<div><a href="index.html#services">Paslaugos</a></div>
+					<div><a href="documents/salygos.pdf" target="_blank">Sąlygos</a></div>
+					<div><a href="index.html#contacts">Kontaktai</a></div>
+				</nav>
 			</div>
-			<nav id="nav-bar" class="nav-bar">
-				<div><a href="index.html#about">Apie mus</a></div>
-				<div><a href="index.html#services">Paslaugos</a></div>
-				<div><a href="documents/salygos.pdf" target="_blank">Sąlygos</a></div>
-				<div><a href="index.html#contacts">Kontaktai</a></div>
-			</nav>
 		</header>
-
 					<!--3. Main-->
 
 		<main>
@@ -280,8 +276,6 @@
 				document.getElementById('return-place').innerHTML = backCity;
 				document.getElementById('return-date').innerHTML = backDate;
 				document.getElementById('return-time').innerHTML = backTime;
-
-				//document.getElementById('pickup-place').innerHTML = city;
 			}
 		</script>
 	</body>
