@@ -91,12 +91,88 @@
 							<span>Benzinas/elektra</span><br>
 							<span>Mechaninė</span><br>
 						</div>
-
 					</div>
 					<div class="about-price">
 						<span>Kaina:</span>
 						<span><big>€34 </big><small>(€17/parai)</small></span>
-						<span><button id="continue-with-swift" class="button">Pasirinkti</button></span>
+						<span><button id="continue-ordering" class="button">Pasirinkti</button></span>
+						<div id="my-modal" class="modal">
+							<div class="modal-content">
+								<span class="close">&times;</span>
+								<div>
+									<h4>Automobilio rezervacija</h4>
+								</div>
+								<div id="car-and-price-details">
+									<div >
+										<img src="images/toyota-yaris.png" alt="toyota-yaris">
+									</div>
+									<div class="car-details">
+										<div>
+											<span><h5>Ekonominė:</h5></span>
+											<span>Paėmimas:</span><br>
+											<span>Grąžinimas:</span><br>
+											<span>Trukmė:</span>
+										</div>
+										<div>
+											<span><h5>Toyota Yaris ar pan.</h5></span>
+											<span>
+												<span id="pickup-place" title="Vilniaus Oro Uostas">VNO</span>
+												<span id="pickup-date">2019-10-10</span>
+												<span id="pickup-time">15:30</span>
+											</span><br>
+											<span>
+												<span id="return-place">VNO</span>
+												<span id="return-date">2019-10-20</span>
+												<span id="return-time">15:30</span><br>
+											</span>
+											<span>2 paros</span>
+										</div>
+									</div>
+								</div>
+								<form id="order-details">
+									<div class="included-and-extras">
+										<div>
+											<spam>Į kainą įskaičiuota</spam><br><br>
+											<spam><input type="checkbox" checked>Kasko draudimas (frančizė - 400€)</spam><br>
+											<spam><input type="checkbox" checked>Privalomas draudimas</spam><br>
+											<spam><input type="checkbox" checked>400 km/para rida (papildomas km – 0,10€)</spam><br>
+											<spam><input type="checkbox" checked>24/7 pagalba kelyje</spam><br>
+											<spam><input type="checkbox">Vaikiška kėdutė (nemokamai)</spam><br>
+											<spam><input type="checkbox">GPS (nemokamai)</spam>
+										</div>
+										<div>
+											<spam>Papildomai</spam><br><br>
+											<spam><input type="checkbox">Kasko draudimas (frančizė - 0€)(10€/para)</spam><br>
+											<spam><input type="checkbox">Papildomas vairuotojas (5€/para)</spam><br>
+											<spam><input type="checkbox">Neribota rida (10€/para)</spam><br>
+											<spam><input type="checkbox">Wi-Fi (3€/para)</spam>
+										</div>
+									</div>
+									<div class="sum-details">
+										<div>
+											<span>Paros kaina:</span><br>
+											<span>Papildomai:</span><br>
+											<span><b>Suma iš viso:</b></span>
+										</div>
+										<div>
+<!--											<span><h5></h5></span><br>-->
+											<span>20</span><br>
+											<span>0</span><br>
+											<span>40</span>
+										</div>
+										<div>
+<!--											<span><h5></h5></span><br>-->
+											<span>€</span><br>
+											<span>€</span><br>
+											<span>€</span>
+										</div>
+									</div>
+									<div class="button-continue">
+										<button id="continue-ordering" class="button">Tęsti</button>
+									</div>
+								</form>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -123,7 +199,7 @@
 					<div class="about-price">
 						<span>Kaina:</span>
 						<span><big>€40 </big><small>(€20/parai)</small></span>
-						<span><button id="continue-with-yaris" class="button"><a href="car-reservation.html">Pasirinkti</a></button></span>
+						<span><button id="continue-with-yaris" class="button">Pasirinkti</button></span>
 					</div>
 				</div>
 			</div>
@@ -276,6 +352,26 @@
 				document.getElementById('return-place').innerHTML = backCity;
 				document.getElementById('return-date').innerHTML = backDate;
 				document.getElementById('return-time').innerHTML = backTime;
+			}
+		</script>
+		<script>
+			var modal = document.getElementById("my-modal");
+			var btn = document.getElementById("continue-ordering");
+			var span = document.getElementsByClassName("close")[0];
+
+			btn.onclick = function() {
+			  modal.style.display = "block";
+			}
+
+			span.onclick = function() {
+			  modal.style.display = "none";
+			}
+
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+			  if (event.target == modal) {
+				modal.style.display = "none";
+			  }
 			}
 		</script>
 	</body>

@@ -46,6 +46,7 @@
 
 .car-offer-bar img {
 	width: 250px;
+	height: 185px;
 }
 
 #white-background {
@@ -57,8 +58,12 @@
 	margin-top: 5px;
 }
 
-.car-offer-bar div {
+.car-offer-bar > div {
 	margin: 10px 5px 0 5px;
+}
+
+.about-car div, .about-price span {
+	margin: 20px 5px 0 5px;
 }
 
 .about-car, .about-price {
@@ -110,6 +115,120 @@
 	}
 	.car-rental-period div {
 		justify-content: center;
+	}
+}
+
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	right: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+	background-color: #FEFEFE;
+	margin: 100px auto; /* 15% from the top and centered */
+	padding: 10px;
+	border: 1px solid #888;
+	width: 70%; /* Could be more or less, depending on screen size */
+}
+
+.modal-content h4 {
+	text-align: center;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#car-and-price-details {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	flex-flow: row wrap;
+}
+
+#car-and-price-details img {
+	width: 250px;
+}
+
+.car-details {
+	margin-top: 20px;
+	display: flex;
+}
+
+.car-details span, h5 {
+	margin: 10px 5px;
+}
+
+#order-details {
+	display: flex;
+	flex-direction: row wrap;
+	justify-content: center;
+}
+
+.included-and-extras {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.included-and-extras div {
+	margin: 10px 100px;
+}
+
+.sum-details {
+	display: flex;
+	flex-direction: row wrap;
+	justify-content: center;
+	margin-top: 250px;
+	margin-right: 20px
+}
+
+.button-continue {
+	margin-top: 260px;
+}
+
+@media all and (max-width: 600px) {
+	.car-details {
+		font-size: 12px;
+		justify-content: center;
+		margin: 0 auto;
+	}
+	#order-details {
+		font-size: 14px;
+		flex-flow: column;
+		justify-content: center;
+	}
+	.included-and-extras div {
+		margin: 10px auto;
+	}
+	.button-continue, .sum-details {
+		margin-top: 10px;
+	}
+	.sum-details {
+		justify-content: center;
+	}
+	.modal-content {
+		width: 90%;
 	}
 }
 
