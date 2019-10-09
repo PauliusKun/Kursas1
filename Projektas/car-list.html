@@ -19,7 +19,7 @@
 						<img class="hours-icon" src="images/hours-support-icon.svg" alt="hours-icon">
 					</div>
 					<div>
-						<p>+37068663132</p>
+						<p><a href="tel:+37068663132">+37068663132</a></p>
 					</div>
 					<div>
 						<img class="mail-icon" src="images/eta-icon.svg" alt="mail-icon">
@@ -95,18 +95,18 @@
 					<div class="about-price">
 						<span>Kaina:</span>
 						<span><big>€34 </big><small>(€17/parai)</small></span>
-						<span><button id="continue-ordering" class="button">Pasirinkti</button></span>
+						<span><button id="continue-ordering" class="button" onclick="getCookieAndWriteValue()">Pasirinkti</button></span>
 						<div id="my-modal" class="modal">
 							<div class="modal-content">
 								<span class="close">&times;</span>
 								<div>
 									<h4>Automobilio rezervacija</h4>
 								</div>
-								<div id="car-and-price-details">
+								<div id="selection-details">
 									<div >
-										<img src="images/toyota-yaris.png" alt="toyota-yaris">
+										<img src="images/suzuki-swift.jpg" alt="suzuki-swift">
 									</div>
-									<div class="car-details">
+									<div class="car-and-choice-details">
 										<div>
 											<span><h5>Ekonominė:</h5></span>
 											<span>Paėmimas:</span><br>
@@ -114,25 +114,25 @@
 											<span>Trukmė:</span>
 										</div>
 										<div>
-											<span><h5>Toyota Yaris ar pan.</h5></span>
+											<span><h5>Suzuki Swift ar pan.</h5></span>
 											<span>
-												<span id="pickup-place" title="Vilniaus Oro Uostas">VNO</span>
-												<span id="pickup-date">2019-10-10</span>
-												<span id="pickup-time">15:30</span>
+												<span id="pickup-place"></span>
+												<span id="pickup-date"></span>
+												<span id="pickup-time"></span>
 											</span><br>
 											<span>
-												<span id="return-place">VNO</span>
-												<span id="return-date">2019-10-20</span>
-												<span id="return-time">15:30</span><br>
+												<span id="return-place"></span>
+												<span id="return-date"></span>
+												<span id="return-time"></span><br>
 											</span>
-											<span>2 paros</span>
+											<span id="calculate-period"></span>
 										</div>
 									</div>
 								</div>
 								<form id="order-details">
 									<div class="included-and-extras">
-										<div>
-											<spam>Į kainą įskaičiuota</spam><br><br>
+										<div class="included">
+											<div>Į kainą įskaičiuota</div><br><br>
 											<spam><input type="checkbox" checked>Kasko draudimas (frančizė - 400€)</spam><br>
 											<spam><input type="checkbox" checked>Privalomas draudimas</spam><br>
 											<spam><input type="checkbox" checked>400 km/para rida (papildomas km – 0,10€)</spam><br>
@@ -140,8 +140,8 @@
 											<spam><input type="checkbox">Vaikiška kėdutė (nemokamai)</spam><br>
 											<spam><input type="checkbox">GPS (nemokamai)</spam>
 										</div>
-										<div>
-											<spam>Papildomai</spam><br><br>
+										<div class="extras">
+											<div>Papildomai</div><br><br>
 											<spam><input type="checkbox">Kasko draudimas (frančizė - 0€)(10€/para)</spam><br>
 											<spam><input type="checkbox">Papildomas vairuotojas (5€/para)</spam><br>
 											<spam><input type="checkbox">Neribota rida (10€/para)</spam><br>
@@ -155,16 +155,14 @@
 											<span><b>Suma iš viso:</b></span>
 										</div>
 										<div>
-<!--											<span><h5></h5></span><br>-->
-											<span>20</span><br>
+											<span>17</span><br>
 											<span>0</span><br>
-											<span>40</span>
+											<span><b>34</b></span>
 										</div>
 										<div>
-<!--											<span><h5></h5></span><br>-->
 											<span>€</span><br>
 											<span>€</span><br>
-											<span>€</span>
+											<span><b>€</b></span>
 										</div>
 									</div>
 									<div class="button-continue">
@@ -194,12 +192,86 @@
 							<span>Benzinas/elektra</span><br>
 							<span>Automatinė</span><br>
 						</div>
-
 					</div>
 					<div class="about-price">
 						<span>Kaina:</span>
 						<span><big>€40 </big><small>(€20/parai)</small></span>
-						<span><button id="continue-with-yaris" class="button">Pasirinkti</button></span>
+						<span><button id="continue-ordering2" class="button">Pasirinkti</button></span>
+						<div id="my-modal2" class="modal">
+							<div class="modal-content">
+								<span class="close2">&times;</span>
+								<div>
+									<h4>Automobilio rezervacija</h4>
+								</div>
+								<div id="selection-details">
+									<div >
+										<img src="images/toyota-yaris.png" alt="toyota-yaris">
+									</div>
+									<div class="car-and-choice-details">
+										<div>
+											<span><h5>Ekonominė:</h5></span>
+											<span>Paėmimas:</span><br>
+											<span>Grąžinimas:</span><br>
+											<span>Trukmė:</span>
+										</div>
+										<div>
+											<span><h5>Toyota Yaris ar pan.</h5></span>
+											<span>
+												<span id="pickup-place"></span>
+												<span id="pickup-date"></span>
+												<span id="pickup-time"></span>
+											</span><br>
+											<span>
+												<span id="return-place"></span>
+												<span id="return-date"></span>
+												<span id="return-time"></span><br>
+											</span>
+											<span id="calculate-period"></span>
+										</div>
+									</div>
+								</div>
+								<form id="order-details">
+									<div class="included-and-extras">
+										<div class="included">
+											<div>Į kainą įskaičiuota</div><br><br>
+											<spam><input type="checkbox" checked>Kasko draudimas (frančizė - 400€)</spam><br>
+											<spam><input type="checkbox" checked>Privalomas draudimas</spam><br>
+											<spam><input type="checkbox" checked>400 km/para rida (papildomas km – 0,10€)</spam><br>
+											<spam><input type="checkbox" checked>24/7 pagalba kelyje</spam><br>
+											<spam><input type="checkbox">Vaikiška kėdutė (nemokamai)</spam><br>
+											<spam><input type="checkbox">GPS (nemokamai)</spam>
+										</div>
+										<div class="extras">
+											<div>Papildomai</div><br><br>
+											<spam><input type="checkbox">Kasko draudimas (frančizė - 0€)(10€/para)</spam><br>
+											<spam><input type="checkbox">Papildomas vairuotojas (5€/para)</spam><br>
+											<spam><input type="checkbox">Neribota rida (10€/para)</spam><br>
+											<spam><input type="checkbox">Wi-Fi (3€/para)</spam>
+										</div>
+									</div>
+									<div class="sum-details">
+										<div>
+											<span>Paros kaina:</span><br>
+											<span>Papildomai:</span><br>
+											<span><b>Suma iš viso:</b></span>
+										</div>
+										<div>
+											<span>20</span><br>
+											<span>0</span><br>
+											<span><b>40</b></span>
+										</div>
+										<div>
+											<span>€</span><br>
+											<span>€</span><br>
+											<span><b>€</b></span>
+										</div>
+									</div>
+									<div class="button-continue">
+										<button id="continue-ordering" class="button">Tęsti</button>
+									</div>
+								</form>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -221,12 +293,86 @@
 							<span>Benzinas/elektra</span><br>
 							<span>Automatinė</span><br>
 						</div>
-
 					</div>
 					<div class="about-price">
 						<span>Kaina:</span>
 						<span><big>€50 </big><small>(€25/parai)</small></span>
-						<span><button id="continue-with-corolla" class="button">Pasirinkti</button></span>
+						<span><button id="continue-ordering3" class="button">Pasirinkti</button></span>
+						<div id="my-modal3" class="modal">
+							<div class="modal-content">
+								<span class="close3">&times;</span>
+								<div>
+									<h4>Automobilio rezervacija</h4>
+								</div>
+								<div id="selection-details">
+									<div >
+										<img src="images/toyota-corolla-hatchback.jpg" alt="toyota-corolla-hybrid">
+									</div>
+									<div class="car-and-choice-details">
+										<div>
+											<span><h5>Ekonominė:</h5></span>
+											<span>Paėmimas:</span><br>
+											<span>Grąžinimas:</span><br>
+											<span>Trukmė:</span>
+										</div>
+										<div>
+											<span><h5>Toyota Corolla ar pan.</h5></span>
+											<span>
+												<span id="pickup-place"></span>
+												<span id="pickup-date"></span>
+												<span id="pickup-time"></span>
+											</span><br>
+											<span>
+												<span id="return-place"></span>
+												<span id="return-date"></span>
+												<span id="return-time"></span><br>
+											</span>
+											<span id="calculate-period"></span>
+										</div>
+									</div>
+								</div>
+								<form id="order-details">
+									<div class="included-and-extras">
+										<div class="included">
+											<div>Į kainą įskaičiuota</div><br><br>
+											<spam><input type="checkbox" checked>Kasko draudimas (frančizė - 400€)</spam><br>
+											<spam><input type="checkbox" checked>Privalomas draudimas</spam><br>
+											<spam><input type="checkbox" checked>400 km/para rida (papildomas km – 0,10€)</spam><br>
+											<spam><input type="checkbox" checked>24/7 pagalba kelyje</spam><br>
+											<spam><input type="checkbox">Vaikiška kėdutė (nemokamai)</spam><br>
+											<spam><input type="checkbox">GPS (nemokamai)</spam>
+										</div>
+										<div class="extras">
+											<div>Papildomai</div><br><br>
+											<spam><input type="checkbox">Kasko draudimas (frančizė - 0€)(10€/para)</spam><br>
+											<spam><input type="checkbox">Papildomas vairuotojas (5€/para)</spam><br>
+											<spam><input type="checkbox">Neribota rida (10€/para)</spam><br>
+											<spam><input type="checkbox">Wi-Fi (3€/para)</spam>
+										</div>
+									</div>
+									<div class="sum-details">
+										<div>
+											<span>Paros kaina:</span><br>
+											<span>Papildomai:</span><br>
+											<span><b>Suma iš viso:</b></span>
+										</div>
+										<div>
+											<span>25</span><br>
+											<span>0</span><br>
+											<span><b>50</b></span>
+										</div>
+										<div>
+											<span>€</span><br>
+											<span>€</span><br>
+											<span><b>€</b></span>
+										</div>
+									</div>
+									<div class="button-continue">
+										<button id="continue-ordering" class="button">Tęsti</button>
+									</div>
+								</form>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -248,12 +394,86 @@
 							<span>Benzinas/elektra</span><br>
 							<span>Automatinė</span><br>
 						</div>
-
 					</div>
 					<div class="about-price">
 						<span>Kaina:</span>
 						<span><big>€60 </big><small>(€30/parai)</small></span>
-						<span><button id="continue-with-corolla-touring" class="button">Pasirinkti</button></span>
+						<span><button id="continue-ordering4" class="button">Pasirinkti</button></span>
+						<div id="my-modal4" class="modal">
+							<div class="modal-content">
+								<span class="close4">&times;</span>
+								<div>
+									<h4>Automobilio rezervacija</h4>
+								</div>
+								<div id="selection-details">
+									<div >
+										<img src="images/toyota-corolla-sw.png" alt="toyota-corolla-touring-hybrid">
+									</div>
+									<div class="car-and-choice-details">
+										<div>
+											<span><h5>Ekonominė:</h5></span>
+											<span>Paėmimas:</span><br>
+											<span>Grąžinimas:</span><br>
+											<span>Trukmė:</span>
+										</div>
+										<div>
+											<span><h5>Toyota Corolla ar pan.</h5></span>
+											<span>
+												<span id="pickup-place"></span>
+												<span id="pickup-date"></span>
+												<span id="pickup-time"></span>
+											</span><br>
+											<span>
+												<span id="return-place"></span>
+												<span id="return-date"></span>
+												<span id="return-time"></span><br>
+											</span>
+											<span id="calculate-period"></span>
+										</div>
+									</div>
+								</div>
+								<form id="order-details">
+									<div class="included-and-extras">
+										<div class="included">
+											<div>Į kainą įskaičiuota</div><br><br>
+											<spam><input type="checkbox" checked>Kasko draudimas (frančizė - 400€)</spam><br>
+											<spam><input type="checkbox" checked>Privalomas draudimas</spam><br>
+											<spam><input type="checkbox" checked>400 km/para rida (papildomas km – 0,10€)</spam><br>
+											<spam><input type="checkbox" checked>24/7 pagalba kelyje</spam><br>
+											<spam><input type="checkbox">Vaikiška kėdutė (nemokamai)</spam><br>
+											<spam><input type="checkbox">GPS (nemokamai)</spam>
+										</div>
+										<div class="extras">
+											<div>Papildomai</div><br><br>
+											<spam><input type="checkbox">Kasko draudimas (frančizė - 0€)(10€/para)</spam><br>
+											<spam><input type="checkbox">Papildomas vairuotojas (5€/para)</spam><br>
+											<spam><input type="checkbox">Neribota rida (10€/para)</spam><br>
+											<spam><input type="checkbox">Wi-Fi (3€/para)</spam>
+										</div>
+									</div>
+									<div class="sum-details">
+										<div>
+											<span>Paros kaina:</span><br>
+											<span>Papildomai:</span><br>
+											<span><b>Suma iš viso:</b></span>
+										</div>
+										<div>
+											<span>30</span><br>
+											<span>0</span><br>
+											<span><b>60</b></span>
+										</div>
+										<div>
+											<span>€</span><br>
+											<span>€</span><br>
+											<span><b>€</b></span>
+										</div>
+									</div>
+									<div class="button-continue">
+										<button id="continue-ordering" class="button">Tęsti</button>
+									</div>
+								</form>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -275,12 +495,86 @@
 							<span>Benzinas/elektra</span><br>
 							<span>Automatinė</span><br>
 						</div>
-
 					</div>
 					<div class="about-price">
 						<span>Kaina:</span>
 						<span><big>€70 </big><small>(€35/parai)</small></span>
-						<span><button id="continue-with-chr" class="button">Pasirinkti</button></span>
+						<span><button id="continue-ordering5" class="button">Pasirinkti</button></span>
+						<div id="my-modal5" class="modal">
+							<div class="modal-content">
+								<span class="close5">&times;</span>
+								<div>
+									<h4>Automobilio rezervacija</h4>
+								</div>
+								<div id="selection-details">
+									<div >
+										<img src="images/toyota-chr.png" alt="toyota-chr-hybrid">
+									</div>
+									<div class="car-and-choice-details">
+										<div>
+											<span><h5>Ekonominė:</h5></span>
+											<span>Paėmimas:</span><br>
+											<span>Grąžinimas:</span><br>
+											<span>Trukmė:</span>
+										</div>
+										<div>
+											<span><h5>Toyota C-HR ar pan.</h5></span>
+											<span>
+												<span id="pickup-place"></span>
+												<span id="pickup-date"></span>
+												<span id="pickup-time"></span>
+											</span><br>
+											<span>
+												<span id="return-place"></span>
+												<span id="return-date"></span>
+												<span id="return-time"></span><br>
+											</span>
+											<span id="calculate-period"></span>
+										</div>
+									</div>
+								</div>
+								<form id="order-details">
+									<div class="included-and-extras">
+										<div class="included">
+											<div>Į kainą įskaičiuota</div><br><br>
+											<spam><input type="checkbox" checked>Kasko draudimas (frančizė - 400€)</spam><br>
+											<spam><input type="checkbox" checked>Privalomas draudimas</spam><br>
+											<spam><input type="checkbox" checked>400 km/para rida (papildomas km – 0,10€)</spam><br>
+											<spam><input type="checkbox" checked>24/7 pagalba kelyje</spam><br>
+											<spam><input type="checkbox">Vaikiška kėdutė (nemokamai)</spam><br>
+											<spam><input type="checkbox">GPS (nemokamai)</spam>
+										</div>
+										<div class="extras">
+											<div>Papildomai</div><br><br>
+											<spam><input type="checkbox">Kasko draudimas (frančizė - 0€)(10€/para)</spam><br>
+											<spam><input type="checkbox">Papildomas vairuotojas (5€/para)</spam><br>
+											<spam><input type="checkbox">Neribota rida (10€/para)</spam><br>
+											<spam><input type="checkbox">Wi-Fi (3€/para)</spam>
+										</div>
+									</div>
+									<div class="sum-details">
+										<div>
+											<span>Paros kaina:</span><br>
+											<span>Papildomai:</span><br>
+											<span><b>Suma iš viso:</b></span>
+										</div>
+										<div>
+											<span>35</span><br>
+											<span>0</span><br>
+											<span><b>70</b></span>
+										</div>
+										<div>
+											<span>€</span><br>
+											<span>€</span><br>
+											<span><b>€</b></span>
+										</div>
+									</div>
+									<div class="button-continue">
+										<button id="continue-ordering" class="button">Tęsti</button>
+									</div>
+								</form>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -302,12 +596,86 @@
 							<span>Benzinas/elektra</span><br>
 							<span>Automatinė</span><br>
 						</div>
-
 					</div>
 					<div class="about-price">
 						<span>Kaina:</span>
 						<span><big>€80 </big><small>(€40/parai)</small></span>
-						<span><button id="continue-with-rav4" class="button">Pasirinkti</button></span>
+						<span><button id="continue-ordering6" class="button">Pasirinkti</button></span>
+						<div id="my-modal6" class="modal">
+							<div class="modal-content">
+								<span class="close6">&times;</span>
+								<div>
+									<h4>Automobilio rezervacija</h4>
+								</div>
+								<div id="selection-details">
+									<div >
+										<img src="images/toyota-rav4.png" alt="toyota-rav4-hybrid">
+									</div>
+									<div class="car-and-choice-details">
+										<div>
+											<span><h5>Ekonominė:</h5></span>
+											<span>Paėmimas:</span><br>
+											<span>Grąžinimas:</span><br>
+											<span>Trukmė:</span>
+										</div>
+										<div>
+											<span><h5>Toyota Rav4 ar pan.</h5></span>
+											<span>
+												<span id="pickup-place"></span>
+												<span id="pickup-date"></span>
+												<span id="pickup-time"></span>
+											</span><br>
+											<span>
+												<span id="return-place"></span>
+												<span id="return-date"></span>
+												<span id="return-time"></span><br>
+											</span>
+											<span id="calculate-period"></span>
+										</div>
+									</div>
+								</div>
+								<form id="order-details">
+									<div class="included-and-extras">
+										<div class="included">
+											<div>Į kainą įskaičiuota</div><br><br>
+											<spam><input type="checkbox" checked>Kasko draudimas (frančizė - 400€)</spam><br>
+											<spam><input type="checkbox" checked>Privalomas draudimas</spam><br>
+											<spam><input type="checkbox" checked>400 km/para rida (papildomas km – 0,10€)</spam><br>
+											<spam><input type="checkbox" checked>24/7 pagalba kelyje</spam><br>
+											<spam><input type="checkbox">Vaikiška kėdutė (nemokamai)</spam><br>
+											<spam><input type="checkbox">GPS (nemokamai)</spam>
+										</div>
+										<div class="extras">
+											<div>Papildomai</div><br><br>
+											<spam><input type="checkbox">Kasko draudimas (frančizė - 0€)(10€/para)</spam><br>
+											<spam><input type="checkbox">Papildomas vairuotojas (5€/para)</spam><br>
+											<spam><input type="checkbox">Neribota rida (10€/para)</spam><br>
+											<spam><input type="checkbox">Wi-Fi (3€/para)</spam>
+										</div>
+									</div>
+									<div class="sum-details">
+										<div>
+											<span>Paros kaina:</span><br>
+											<span>Papildomai:</span><br>
+											<span><b>Suma iš viso:</b></span>
+										</div>
+										<div>
+											<span>40</span><br>
+											<span>0</span><br>
+											<span><b>80</b></span>
+										</div>
+										<div>
+											<span>€</span><br>
+											<span>€</span><br>
+											<span><b>€</b></span>
+										</div>
+									</div>
+									<div class="button-continue">
+										<button id="continue-ordering" class="button">Tęsti</button>
+									</div>
+								</form>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -319,10 +687,8 @@
 				<p class="copyright">© 2019 Bluerent</p>
 			</div>
 		</footer>
-
 		</main>
 		<script>
-
 			function getCookie(cname) {
 				var name = cname + "=";
 				var decodedCookie = decodeURIComponent(document.cookie);
@@ -339,7 +705,6 @@
 			return "";
 			}
 			function getCookieAndWriteValue() {
-				//var city = pickupPlace;
 				city = getCookie('city');
 				date = getCookie('date');
 				time = getCookie('time');
@@ -356,22 +721,91 @@
 		</script>
 		<script>
 			var modal = document.getElementById("my-modal");
+			var modal2 = document.getElementById("my-modal2");
+			var modal3 = document.getElementById("my-modal3");
+			var modal4 = document.getElementById("my-modal4");
+			var modal5 = document.getElementById("my-modal5");
+			var modal6 = document.getElementById("my-modal6");
 			var btn = document.getElementById("continue-ordering");
+			var btn2 = document.getElementById("continue-ordering2");
+			var btn3 = document.getElementById("continue-ordering3");
+			var btn4 = document.getElementById("continue-ordering4");
+			var btn5 = document.getElementById("continue-ordering5");
+			var btn6 = document.getElementById("continue-ordering6");
 			var span = document.getElementsByClassName("close")[0];
+			var span2 = document.getElementsByClassName("close2")[0];
+			var span3 = document.getElementsByClassName("close3")[0];
+			var span4 = document.getElementsByClassName("close4")[0];
+			var span5 = document.getElementsByClassName("close5")[0];
+			var span6 = document.getElementsByClassName("close6")[0];
 
 			btn.onclick = function() {
-			  modal.style.display = "block";
+				modal.style.display = "block";
+			}
+			btn2.onclick = function() {
+				modal2.style.display = "block";
+			}
+			btn3.onclick = function() {
+				modal3.style.display = "block";
+			}
+			btn4.onclick = function() {
+				modal4.style.display = "block";
+			}
+			btn5.onclick = function() {
+				modal5.style.display = "block";
+			}
+			btn6.onclick = function() {
+				modal6.style.display = "block";
 			}
 
 			span.onclick = function() {
-			  modal.style.display = "none";
+				modal.style.display = "none";
+			}
+			span2.onclick = function() {
+				modal2.style.display = "none";
+			}
+			span3.onclick = function() {
+				modal3.style.display = "none";
+			}
+			span4.onclick = function() {
+				modal4.style.display = "none";
+			}
+			span5.onclick = function() {
+				modal5.style.display = "none";
+			}
+			span6.onclick = function() {
+				modal6.style.display = "none";
 			}
 
-			// When the user clicks anywhere outside of the modal, close it
 			window.onclick = function(event) {
-			  if (event.target == modal) {
+			if (event.target == modal) {
 				modal.style.display = "none";
-			  }
+				}
+			}
+			window.onclick = function(event) {
+			if (event.target == modal2) {
+				modal2.style.display = "none";
+				}
+			}
+			window.onclick = function(event) {
+			if (event.target == modal3) {
+				modal3.style.display = "none";
+				}
+			}
+			window.onclick = function(event) {
+			if (event.target == modal4) {
+				modal4.style.display = "none";
+				}
+			}
+			window.onclick = function(event) {
+			if (event.target == modal5) {
+				modal5.style.display = "none";
+				}
+			}
+			window.onclick = function(event) {
+			if (event.target == modal6) {
+				modal6.style.display = "none";
+				}
 			}
 		</script>
 	</body>

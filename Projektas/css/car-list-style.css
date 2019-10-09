@@ -82,10 +82,6 @@
 	margin: 0;
 }
 
-#continue-with-pay-now {
-	cursor: pointer;
-}
-
 @media all and (max-width: 800px) {
 	.car-offer-bar {
 		flex-flow: row wrap;
@@ -119,68 +115,70 @@
 }
 
 .modal {
-	display: none; /* Hidden by default */
-	position: fixed; /* Stay in place */
-	z-index: 1; /* Sit on top */
+	display: none;
+	position: fixed;
+	z-index: 1;
 	left: 0;
 	right: 0;
 	top: 0;
-	width: 100%; /* Full width */
-	height: 100%; /* Full height */
-	overflow: auto; /* Enable scroll if needed */
-	background-color: rgb(0,0,0); /* Fallback color */
-	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4);
 }
 
 .modal-content {
-	background-color: #FEFEFE;
-	margin: 100px auto; /* 15% from the top and centered */
+	background-color: #fefefe;
+	margin: 50px auto;
 	padding: 10px;
 	border: 1px solid #888;
-	width: 70%; /* Could be more or less, depending on screen size */
+	width: 80%;
 }
 
 .modal-content h4 {
 	text-align: center;
 }
 
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+.modal-content h5 {
+	margin-left: 5px;
 }
 
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+.close, .close2, .close3, .close4, .close5, .close6 {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
 }
 
-#car-and-price-details {
+.close, .close2, .close3, .close4, .close5, .close6:hover, .close, .close2, .close3, .close4, .close5, .close6:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#selection-details {
 	display: flex;
 	justify-content: center;
-	flex-direction: row;
+	flex-direction: row wrap;
 	flex-flow: row wrap;
 }
 
-#car-and-price-details img {
+#selection-details img {
 	width: 250px;
 }
 
-.car-details {
-	margin-top: 20px;
+.car-and-choice-details {
 	display: flex;
-}
-
-.car-details span, h5 {
-	margin: 10px 5px;
 }
 
 #order-details {
 	display: flex;
 	flex-direction: row wrap;
+	justify-content: center;
+}
+
+#order-details div {
 	justify-content: center;
 }
 
@@ -192,43 +190,61 @@
 }
 
 .included-and-extras div {
-	margin: 10px 100px;
+	margin: 10px auto;
 }
 
 .sum-details {
 	display: flex;
 	flex-direction: row wrap;
 	justify-content: center;
-	margin-top: 250px;
-	margin-right: 20px
+	margin: 250px 20px 0 100px;
 }
 
 .button-continue {
 	margin-top: 260px;
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 1000px) {
+	#selection-details img {
+		width: 170px;
+		height: 120px;
+	}
+	#selection-details h5 {
+		margin-top: 0;
+		margin-left: 0;
+	}
+	#selection-details span {
+		margin: 0;
+	}
 	.car-details {
 		font-size: 12px;
 		justify-content: center;
-		margin: 0 auto;
+		margin: 10px auto;
 	}
 	#order-details {
 		font-size: 14px;
 		flex-flow: column;
 		justify-content: center;
+		margin: 10px auto;
 	}
 	.included-and-extras div {
 		margin: 10px auto;
+	}
+	.included div, .extras div {
+		text-align: center;
+		margin: 0;
 	}
 	.button-continue, .sum-details {
 		margin-top: 10px;
 	}
 	.sum-details {
 		justify-content: center;
+		margin: 10px auto;
+		padding-top: 10px;
 	}
-	.modal-content {
-		width: 90%;
+	.button-continue {
+		width: 60%;
+		margin: 5px auto;
 	}
 }
 

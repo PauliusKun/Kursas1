@@ -116,7 +116,6 @@ figcaption {
 
 @media all and (max-width: 800px) {
 	.first-header-block {
-		flex-flow: column wrap;
 		padding: 10px;
 		justify-content:space-between;
 	}
@@ -419,13 +418,6 @@ figcaption {
 	justify-content: center;
 	padding-bottom: 20px;
 }
-
-/*
-.advantages-list hr {
-	border-top: 1px solid #EAF6F6;
-	width: 150px;
-}
-*/
 
 .advantages-list div {
 	width: 100px;
