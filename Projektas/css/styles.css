@@ -582,7 +582,7 @@ figcaption {
 
 @media all and (max-width: 600px) {
 	.company-details div {
-		width: 100px;
+		width: 200px;
 		font-size: 12px;
 	}
 }

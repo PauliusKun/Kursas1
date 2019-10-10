@@ -136,6 +136,11 @@
 	width: 80%;
 }
 
+.modal-content hr {
+	display: none;
+	position: relative;
+}
+
 .modal-content h4 {
 	text-align: center;
 }
@@ -162,6 +167,7 @@
 	justify-content: center;
 	flex-direction: row wrap;
 	flex-flow: row wrap;
+	margin-left: 20px;
 }
 
 #selection-details img {
@@ -182,6 +188,15 @@
 	justify-content: center;
 }
 
+#order-details h5 {
+	margin-top: 0;
+}
+
+#order-details hr {
+	display: none;
+	position: relative;
+}
+
 .included-and-extras {
 	display: flex;
 	flex-direction: column;
@@ -190,36 +205,40 @@
 }
 
 .included-and-extras div {
-	margin: 10px auto;
+	margin: 10px 0;
 }
 
 .sum-details {
 	display: flex;
 	flex-direction: row wrap;
 	justify-content: center;
-	margin: 250px 20px 0 100px;
+	margin: 270px 20px 0 100px;
 }
 
 .button-continue {
-	margin-top: 260px;
+	margin-top: 280px;
 }
 
 @media all and (max-width: 1000px) {
+	.modal-content hr {
+		display:block;
+		width: 20%;
+		border-top: 1px solid #E1EDED;
+	}
+	#selection-details {
+		justify-content: center;
+		margin: 0 auto;
+		font-size: 14px;
+	}
 	#selection-details img {
 		width: 170px;
 		height: 120px;
 	}
-	#selection-details h5 {
-		margin-top: 0;
-		margin-left: 0;
-	}
 	#selection-details span {
 		margin: 0;
 	}
-	.car-details {
-		font-size: 12px;
-		justify-content: center;
-		margin: 10px auto;
+	#selection-details h5 {
+		margin: 0 0 5px 0;
 	}
 	#order-details {
 		font-size: 14px;
@@ -227,10 +246,15 @@
 		justify-content: center;
 		margin: 10px auto;
 	}
+	#order-details hr {
+		display:block;
+		width: 20%;
+		border-top: 1px solid #E1EDED;
+	}
 	.included-and-extras div {
 		margin: 10px auto;
 	}
-	.included div, .extras div {
+	.included h5, .extras h5 {
 		text-align: center;
 		margin: 0;
 	}
