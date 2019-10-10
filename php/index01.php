@@ -4,7 +4,7 @@
 	$population = 574221;
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lt">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
