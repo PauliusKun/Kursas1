@@ -17,7 +17,7 @@
 body {
 	font-family: 'Montserrat', sans-serif;
 	background-color: #EAF6F6;
-	margin: 0;
+	margin: 0 auto;
 }
 
 figcaption {
@@ -43,6 +43,8 @@ figcaption {
 	font-size: 18px;
 	padding-top: 20px;
 }
+
+/*logo and top contacts*/
 
 .logo {
 	padding-top: 5px;
@@ -76,6 +78,8 @@ figcaption {
 	background-color: #66BFBF;
 	color: #ffffff;
 	}
+
+/*meniu bar*/
 
 .nav-bar {
 	background-color: #EAF6F6;
@@ -157,7 +161,7 @@ figcaption {
 	color: #ffffff;
 }
 
-.car-search-window label {
+.car-search-window span {
 	color: #ffffff;
 	padding: 0 6px;
 }
@@ -203,6 +207,11 @@ figcaption {
 	margin: 5px;
 	border: 1px solid #11999E;
 	border-radius: 4px;
+	width: 130px;
+}
+
+.date-input::placeholder {
+	color: #11999E;
 }
 
 .select-time {

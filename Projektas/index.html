@@ -9,7 +9,7 @@
     </head>
     <body>
 		
-					<!-- 1. Header -->
+<!--1. Header -->
 		
 		<header id="header" >
 			<div class="first-header-block">
@@ -35,7 +35,7 @@
 				</div>
 			</div>
         
-					<!-- 1.2 Nav bar -->
+<!-- 1.2 Nav bar -->
 		
 			<div class="second-header-block">
 				<div class="logo">
@@ -50,14 +50,14 @@
 			</div>
 		</header>
 		        
-					<!--3. Article -->
+<!--3. Article -->
 		
-        <main id="main-window">
+		<main id="main-window">
 			<article id="search-form-and-banner" class="search-form-and-banner">
 				<div class="car-search-window">
 					<h3>Automobilio nuomos paieška</h3>
 					<form class="form-section" action="car-list.html">
-						<label for="choose-pickup-place">Paėmimas</label>
+						<span>Pėmimas</span>
 						<div class="select-date-and-time">
 							<select id="select-pickup-place" class="select-pickup-place" name="pickup-place">
 								<option value="nothing-choose" hidden>Paėmimo vieta</option>
@@ -67,8 +67,8 @@
 								<option value="Palangos Oro Uostas (PLQ)">Palangos Oro Uostas (PLQ)</option>
 								<option value="Kita vieta">Kita vieta</option>
 							</select>
-							<input id="pickup-date-input" class="date-input" type="date" name="date" min="1" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
-							<select id="pickup-time-input" class="select-time" name="time">
+							<input id="pickup-date-input" class="date-input" type="text" name="pickup-date" placeholder="Data" onfocus="(this.type='date')" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+							<select id="pickup-time-input" class="select-time" name="pickup-time">
 								<option value="" hidden>Laikas</option>
 								<option>00:00</option>
 								<option>00:30</option>
@@ -120,7 +120,7 @@
 								<option>23:30</option>
 							</select>
 						</div>
-						<label for="choose-return-place">Grąžinimas</label>
+						<span>Grąžinimas</span>
 						<div class="select-date-and-time">
 							<select id="select-return-place" class="select-return-place" name="return-place">
 								<option value="nothing-choose" hidden>Grąžinimo vieta</option>
@@ -130,8 +130,8 @@
 								<option value="Palangos Oro Uostas (PLQ)">Palangos Oro Uostas (PLQ)</option>
 								<option value="Kita vieta">Kita vieta</option>
 							</select>
-							<input id="return-date-input" class="date-input" type="date" name="date" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
-							<select id="return-time-input" class="select-time" name="time">
+							<input id="return-date-input" class="date-input" type="text" name="return-date" placeholder="Data" onfocus="(this.type='date')" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+							<select id="return-time-input" class="select-time" name="return-time">
 								<option value="" hidden>Laikas</option>
 								<option>00:00</option>
 								<option>00:30</option>
@@ -189,30 +189,27 @@
 					</form>
 				</div>
 
-					<!--5. Aside --- >
-					<!--Code from w3school example-->
+<!--5. Aside -->
+
 				<aside class="banner-window">
 					<div class="slideshow-container">
-  						<div class="mySlides fade">
-    						<img src="images/hybrid-car-1.jpg" style="width:100%">
-    						<div class="text">Platus hibridinių automobilių pasirinkimas</div>
-  						</div>
-  						<div class="mySlides fade">
-    						<img src="images/hybrid-car-2.jpg" style="width:100%">
-    						<div class="text">Gausi komplektacija ir nemokama papildoma įranga</div>
-  						</div>
-  						<div class="mySlides fade">
-    						<img src="images/hybrid-car-3.jpg" style="width:100%">
-    						<div class="text">Taupūs bei stilingi krosoveriai ir visureigiai </div>
-  						</div>
+						<div class="mySlides fade">
+							<img src="images/hybrid-car-1.jpg" alt="hybrid-cars">
+							<div class="text">Platus hibridinių automobilių pasirinkimas</div>
+						</div>
+						<div class="mySlides fade">
+							<img src="images/hybrid-car-2.jpg" alt="hybrid-cars-free-extra" >
+							<div class="text">Gausi komplektacija ir nemokama papildoma įranga</div>
+						</div>
+						<div class="mySlides fade">
+							<img src="images/hybrid-car-3.jpg" alt="hybrid-cars-crossover">
+							<div class="text">Taupūs bei stilingi krosoveriai ir visureigiai </div>
+						</div>
 <!--
   						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
   						<a class="next" onclick="plusSlides(1)">&#10095;</a>
 -->
 					</div>
-
-					<!---------------------------->
-
 				</aside>
 			</article>
 			<div class="benefits">
@@ -231,7 +228,7 @@
         	</div>
 		</main>
 		
-					<!--Section1 About us-->
+<!--Section1 About us-->
 		
 		<section id="about">
 			<div class="about-us">
@@ -269,7 +266,7 @@
 			</div>
 		</section>
 		
-					<!--Section2 Services-->
+<!--Section2 Services-->
 		
 		<section id="services" class="services">
 				<h3>Paslaugos</h3>
@@ -326,7 +323,7 @@
 			</div>
 		</section>
 		
-					<!-- Section3 Contacts -->
+<!-- Section3 Contacts -->
 		
 		<section id="contacts">
 			<div>
@@ -363,33 +360,22 @@
 			</div>
 		</section>
 
-					<!--Footer-->
+<!--Footer-->
 
 		<footer>
 			<div id="footer" class="footer">
 				<a href="https://linkedin.com/in/paulius-kundrutas-30739920" target="_blank">LinkedIn</a>
 				<a href="https://www.facebook.com/pauleoo" target="_blank">Facebook</a>
 				<a href="https://www.instagram.com/pauliuskundrutas/Instagram" target="_blank">Instagram</a>
-				<p class="copyright">© 2019 Bluerent</p>
+				<p class="copyright">&copy;2019 Bluerent</p>
 			</div>
 		</footer>
+		<script src="scripts/indexScript.js"></script>
+		<script src="scripts/carListScript.js"></script>
 
-		<script>
-			var slideIndex = 0;
-			showSlides();
+<!--script for set cookies-->
 
-			function showSlides() {
-				var i;
-				var slides = document.getElementsByClassName("mySlides");
-				for (i = 0; i < slides.length; i++) {
-				slides[i].style.display = "none";
-				}
-				slideIndex++;
-				if (slideIndex > slides.length) {slideIndex = 1}
-				slides[slideIndex-1].style.display = "block";
-				setTimeout(showSlides, 4000);
-			}
-		</script>
+<!--
 		<script>
 			var pickupPlace = document.getElementById('select-pickup-place').value;
 			var pickupDate = document.getElementById('pickup-date-input').value;
@@ -413,21 +399,6 @@
 				setCookie('backTime', returnTime, 31);
 			}
 		</script>
-		<script>
-			var acc = document.getElementsByClassName("accordion");
-			var i;
-
-			for (i = 0; i < acc.length; i++) {
-				acc[i].addEventListener("click", function() {
-					this.classList.toggle("active");
-					var panel = this.nextElementSibling;
-					if (panel.style.maxHeight) {
-						panel.style.maxHeight = null;
-					} else {
-						panel.style.maxHeight = panel.scrollHeight + "px";
-					}
-				});
-			}
-		</script>
+-->
 	</body>
 </html>

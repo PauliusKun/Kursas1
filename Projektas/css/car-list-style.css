@@ -1,3 +1,5 @@
+/*1. rental period after header block*/
+
 .car-rental-period {
 	color: #11999E;
 	background-color: #EAF6F6;
@@ -35,6 +37,8 @@
 	margin: 0 5px;
 }
 
+/*2. car-list*/
+
 .car-offer-bar {
 	color: #11999E;
 	height: 200px;
@@ -49,7 +53,7 @@
 	height: 185px;
 }
 
-#white-background {
+#white-background, #white-background2, #white-background3 {
 	background-color: #ffffff;
 }
 
@@ -72,10 +76,16 @@
 	align-items: center;
 }
 
-.about-price span {
-	margin: 10px 5px;
+.about-price {
+	margin-top: 10px;
+}
+
+.about-price > span {
+	font-size: 18px;
+	font-weight: bold;
 	align-items: center;
 	vertical-align: bottom;
+	margin: 10px 5px;
 }
 
 .about-price button {
@@ -114,6 +124,8 @@
 	}
 }
 
+/*3. modal-window*/
+
 .modal {
 	display: none;
 	position: fixed;
@@ -130,7 +142,7 @@
 
 .modal-content {
 	background-color: #fefefe;
-	margin: 50px auto;
+	margin: 40px auto;
 	padding: 10px;
 	border: 1px solid #888;
 	width: 80%;
@@ -162,7 +174,7 @@
 	cursor: pointer;
 }
 
-#selection-details {
+.selection-details {
 	display: flex;
 	justify-content: center;
 	flex-direction: row wrap;
@@ -170,7 +182,7 @@
 	margin-left: 20px;
 }
 
-#selection-details img {
+.selection-details img {
 	width: 250px;
 }
 
@@ -178,21 +190,21 @@
 	display: flex;
 }
 
-#order-details {
+.order-details {
 	display: flex;
 	flex-direction: row wrap;
 	justify-content: center;
 }
 
-#order-details div {
+.order-details div {
 	justify-content: center;
 }
 
-#order-details h5 {
-	margin-top: 0;
+.order-details h5 {
+	margin: 0;
 }
 
-#order-details hr {
+.order-details hr {
 	display: none;
 	position: relative;
 }
@@ -225,28 +237,28 @@
 		width: 20%;
 		border-top: 1px solid #E1EDED;
 	}
-	#selection-details {
+	.selection-details {
 		justify-content: center;
 		margin: 0 auto;
 		font-size: 14px;
 	}
-	#selection-details img {
+	.selection-details img {
 		width: 170px;
 		height: 120px;
 	}
-	#selection-details span {
+	.selection-details span {
 		margin: 0;
 	}
-	#selection-details h5 {
+	.selection-details h5 {
 		margin: 0 0 5px 0;
 	}
-	#order-details {
+	.order-details {
 		font-size: 14px;
 		flex-flow: column;
 		justify-content: center;
 		margin: 10px auto;
 	}
-	#order-details hr {
+	.order-details hr {
 		display:block;
 		width: 20%;
 		border-top: 1px solid #E1EDED;
