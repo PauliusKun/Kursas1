@@ -4,52 +4,17 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Bluerent</title>
-        <link rel="stylesheet" href="css/styles.css" type="text/css">
-        <link rel="stylesheet" href="css/car-list-style.css" type="text/css">
-		<link rel="icon" href="images/favicon.ico">
+        <link rel="stylesheet" href="app/css/styles.css" type="text/css">
+        <link rel="stylesheet" href="app/css/car-list-style.css" type="text/css">
+		<link rel="icon" href="app/images/favicon.ico">
     </head>
     <body onload="getCookieAndWriteValue()">
 
 <!-- Header -->
 
-		<header id="header" >
-			<div class="first-header-block">
-				<div class="top-telephone-and-mail">
-					<div>
-						<img class="hours-icon" src="images/hours-support-icon.svg" alt="hours-icon">
-					</div>
-					<div>
-						<p><a href="tel:+37068663132">+37068663132</a></p>
-					</div>
-					<div>
-						<img class="mail-icon" src="images/eta-icon.svg" alt="mail-icon">
-					</div>
-					<div>
-						<p><a href="mailto:p.kundrutas@gmail.com">info@bluerent.lt</a></p>
-					</div>
-				</div>
-				<div class="select-language">
-					<select>
-						<option value="LT">LT</option>
-						<option value="EN">EN</option>
-					</select>
-				</div>
-			</div>
-
-<!-- Nav bar -->
-
-			<div class="second-header-block">
-				<div class="logo">
-					<img src="images/bluerent-logo.svg" alt="bluerent" title="bluerent - hibridiniu ir elektriniu automobiliu nuoma">
-				</div>
-				<nav id="nav-bar" class="nav-bar">
-					<div><a href="index.html#about">Apie mus</a></div>
-					<div><a href="index.html#services">Paslaugos</a></div>
-					<div><a href="documents/salygos.pdf" target="_blank">Sąlygos</a></div>
-					<div><a href="index.html#contacts">Kontaktai</a></div>
-				</nav>
-			</div>
-		</header>
+		<?php
+			include('app/views/header.php');
+		?>
 
 <!-- Main-->
 
@@ -62,7 +27,7 @@
 						<span id="pickup-date"></span>
 						<span id="pickup-time"></span>
 					</div>
-					<h6><a href="index.html">Redaguoti</a></h6>
+					<h6><a href="index.php">Redaguoti</a></h6>
 				</div>
 				<div>
 					<h5>Automobilio grąžinimas</h5>
@@ -71,7 +36,7 @@
 						<span id="return-date"></span>
 						<span id="return-time"></span>
 					</div>
-					<h6><a href="index.html">Redaguoti</a></h6>
+					<h6><a href="index.php">Redaguoti</a></h6>
 				</div>
 			</div>
 
@@ -79,7 +44,7 @@
 
 			<div id="white-background" class="car-offer-bar">
 				<div>
-					<img src="images/suzuki-swift.jpg" alt="suzuki-swift-hybrid" title="suzuki-swift-hybrid-nuoma" >
+					<img src="app/images/suzuki-swift.jpg" alt="suzuki-swift-hybrid" title="suzuki-swift-hybrid-nuoma" >
 				</div>
 				<div>
 					<div class="about-car">
@@ -99,7 +64,7 @@
 					<div class="about-price">
 						<span>Kaina:</span>
 						<span>€34 <small>(€17/parai)</small></span>
-						<span><button id="continue-ordering" class="button" onclick="getCookieAndWriteValue()">Pasirinkti</button></span>
+						<span><button id="continue-ordering" class="button" onclick="getCookieAndWriteValue();">Pasirinkti</button></span>
 
 <!--suzuki-swift-modal-->
 
@@ -111,7 +76,7 @@
 								</div>
 								<div class="selection-details">
 									<div >
-										<img src="images/suzuki-swift.jpg" alt="suzuki-swift">
+										<img src="app/images/suzuki-swift.jpg" alt="suzuki-swift">
 									</div>
 									<div class="car-and-choice-details">
 										<div>
@@ -189,7 +154,7 @@
 
 			<div class="car-offer-bar">
 				<div>
-					<img src="images/toyota-yaris.png" alt="toyota-yaris-hybrid" title="toyota-yaris-hybrid-nuoma">
+					<img src="app/images/toyota-yaris.png" alt="toyota-yaris-hybrid" title="toyota-yaris-hybrid-nuoma">
 				</div>
 				<div>
 					<div class="about-car">
@@ -221,7 +186,7 @@
 								</div>
 								<div class="selection-details">
 									<div >
-										<img src="images/toyota-yaris.png" alt="toyota-yaris">
+										<img src="app/images/toyota-yaris.png" alt="toyota-yaris">
 									</div>
 									<div class="car-and-choice-details">
 										<div>
@@ -299,7 +264,7 @@
 
 			<div id="white-background2" class="car-offer-bar">
 				<div>
-					<img src="images/toyota-corolla-hatchback.jpg" alt="toyota-corolla-hybrid" title="toyota-corolla-hybrid-nuoma">
+					<img src="app/images/toyota-corolla-hatchback.jpg" alt="toyota-corolla-hybrid" title="toyota-corolla-hybrid-nuoma">
 				</div>
 				<div>
 					<div class="about-car">
@@ -331,7 +296,7 @@
 								</div>
 								<div class="selection-details">
 									<div >
-										<img src="images/toyota-corolla-hatchback.jpg" alt="toyota-corolla-hybrid">
+										<img src="app/images/toyota-corolla-hatchback.jpg" alt="toyota-corolla-hybrid">
 									</div>
 									<div class="car-and-choice-details">
 										<div>
@@ -409,7 +374,7 @@
 
 			<div class="car-offer-bar">
 				<div>
-					<img src="images/toyota-corolla-sw.png" alt="toyota-corolla-touring-hybrid" title="toyota-corolla-touring-hybrid-nuoma">
+					<img src="app/images/toyota-corolla-sw.png" alt="toyota-corolla-touring-hybrid" title="toyota-corolla-touring-hybrid-nuoma">
 				</div>
 				<div>
 					<div class="about-car">
@@ -441,7 +406,7 @@
 								</div>
 								<div class="selection-details">
 									<div >
-										<img src="images/toyota-corolla-sw.png" alt="toyota-corolla-touring-hybrid">
+										<img src="app/images/toyota-corolla-sw.png" alt="toyota-corolla-touring-hybrid">
 									</div>
 									<div class="car-and-choice-details">
 										<div>
@@ -519,7 +484,7 @@
 
 			<div id="white-background3" class="car-offer-bar">
 				<div>
-					<img src="images/toyota-chr.png" alt="toyota-chr-hybrid" title="toyota-chr-hybrid-nuoma">
+					<img src="app/images/toyota-chr.png" alt="toyota-chr-hybrid" title="toyota-chr-hybrid-nuoma">
 				</div>
 				<div>
 					<div class="about-car">
@@ -551,7 +516,7 @@
 								</div>
 								<div class="selection-details">
 									<div >
-										<img src="images/toyota-chr.png" alt="toyota-chr-hybrid">
+										<img src="app/images/toyota-chr.png" alt="toyota-chr-hybrid">
 									</div>
 									<div class="car-and-choice-details">
 										<div>
@@ -629,7 +594,7 @@
 
 			<div class="car-offer-bar">
 				<div>
-					<img src="images/toyota-rav4.png" alt="toyota-rav4-hybrid" title="toyota-rav4-hybrid-nuoma">
+					<img src="app/images/toyota-rav4.png" alt="toyota-rav4-hybrid" title="toyota-rav4-hybrid-nuoma">
 				</div>
 				<div>
 					<div class="about-car">
@@ -661,7 +626,7 @@
 								</div>
 								<div class="selection-details">
 									<div >
-										<img src="images/toyota-rav4.png" alt="toyota-rav4-hybrid">
+										<img src="app/images/toyota-rav4.png" alt="toyota-rav4-hybrid">
 									</div>
 									<div class="car-and-choice-details">
 										<div>
@@ -734,55 +699,17 @@
 					</div>
 				</div>
 			</div>
+		</main>
 
 <!--Footer-->
 
-			<footer>
-			<div id="footer" class="footer">
-				<a href="https://linkedin.com/in/paulius-kundrutas-30739920" target="_blank">LinkedIn</a>
-				<a href="https://www.facebook.com/pauleoo" target="_blank">Facebook</a>
-				<a href="https://www.instagram.com/pauliuskundrutas/Instagram" target="_blank">Instagram</a>
-				<p class="copyright">&copy;2019 Bluerent</p>
-			</div>
-		</footer>
-		</main>
-		<script src="scripts/indexScript.js"></script>
-		<script src="scripts/carListScript.js"></script>
+		<?php
+			include('app/views/footer.php');
+		?>
 
-<!--script for get cookies-->
+<!--script-->
 
-<!--
-		<script>
-			function getCookie(cname) {
-				var name = cname + "=";
-				var decodedCookie = decodeURIComponent(document.cookie);
-				var ca = decodedCookie.split(';');
-				for(var i = 0; i <ca.length; i++) {
-					var c = ca[i];
-					while (c.charAt(0) == ' ') {
-						c = c.substring(1);
-					}
-					if (c.indexOf(name) == 0) {
-						return c.substring(name.length, c.length);
-					}
-				}
-			return "";
-			}
-			function getCookieAndWriteValue() {
-				city = getCookie('city');
-				date = getCookie('date');
-				time = getCookie('time');
-				backCity = getCookie('backCity');
-				backDate = getCookie('backDate');
-				backTime = getCookie('backTime');
-				document.getElementById('pickup-place').innerHTML = city;
-				document.getElementById('pickup-date').innerHTML = date;
-				document.getElementById('pickup-time').innerHTML = time;
-				document.getElementById('return-place').innerHTML = backCity;
-				document.getElementById('return-date').innerHTML = backDate;
-				document.getElementById('return-time').innerHTML = backTime;
-			}
-		</script>
--->
+		<script src="app/scripts/carListScript.js"></script>
+
 	</body>
 </html>

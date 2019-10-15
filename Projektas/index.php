@@ -1,62 +1,30 @@
+<?php
+	require __DIR__ . '/app/src/app.php';
+?>
 <!DOCTYPE html>
 <html lang="lt">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Bluerent</title>
-        <link rel="stylesheet" href="css/styles.css" type="text/css">
-		<link rel="icon" href="images/favicon.ico">
+        <link rel="stylesheet" href="app/css/styles.css" type="text/css">
+		<link rel="icon" href="app/images/favicon.ico">
     </head>
     <body>
-		
-<!--1. Header -->
-		
-		<header id="header" >
-			<div class="first-header-block">
-				<div class="top-telephone-and-mail">
-					<div>
-						<img class="hours-icon" src="images/hours-support-icon.svg" alt="hours-icon">
-					</div>
-					<div>
-						<p><a href="tel:+37068663132">+37068663132</a></p>
-					</div>
-					<div>
-						<img class="mail-icon" src="images/eta-icon.svg" alt="mail-icon">
-					</div>
-					<div>
-						<p><a href="mailto:p.kundrutas@gmail.com">info@bluerent.lt</a></p>
-					</div>
-				</div>
-				<div class="select-language">
-					<select>
-						<option value="LT">LT</option>
-						<option value="EN">EN</option>
-					</select>
-				</div>
-			</div>
-        
-<!-- 1.2 Nav bar -->
-		
-			<div class="second-header-block">
-				<div class="logo">
-					<img src="images/bluerent-logo.svg" alt="bluerent" title="bluerent - hibridiniu ir elektriniu automobiliu nuoma">
-				</div>
-				<nav id="nav-bar" class="nav-bar">
-					<div><a href="index.html#about">Apie mus</a></div>
-					<div><a href="index.html#services">Paslaugos</a></div>
-					<div><a href="documents/salygos.pdf" target="_blank">Sąlygos</a></div>
-					<div><a href="index.html#contacts">Kontaktai</a></div>
-				</nav>
-			</div>
-		</header>
-		        
-<!--3. Article -->
-		
+
+<!-- Header -->
+
+		<?php
+			include('app/views/header.php');
+		?>
+
+<!-- Article -->
+
 		<main id="main-window">
 			<article id="search-form-and-banner" class="search-form-and-banner">
 				<div class="car-search-window">
 					<h3>Automobilio nuomos paieška</h3>
-					<form class="form-section" action="car-list.html">
+					<form class="form-section" action="car-list.php">
 						<span>Pėmimas</span>
 						<div class="select-date-and-time">
 							<select id="select-pickup-place" class="select-pickup-place" name="pickup-place">
@@ -67,7 +35,7 @@
 								<option value="Palangos Oro Uostas (PLQ)">Palangos Oro Uostas (PLQ)</option>
 								<option value="Kita vieta">Kita vieta</option>
 							</select>
-							<input id="pickup-date-input" class="date-input" type="text" name="pickup-date" placeholder="Data" onfocus="(this.type='date')" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+							<input id="pickup-date-input" class="date-input" type="date" name="pickup-date">
 							<select id="pickup-time-input" class="select-time" name="pickup-time">
 								<option value="" hidden>Laikas</option>
 								<option>00:00</option>
@@ -130,7 +98,7 @@
 								<option value="Palangos Oro Uostas (PLQ)">Palangos Oro Uostas (PLQ)</option>
 								<option value="Kita vieta">Kita vieta</option>
 							</select>
-							<input id="return-date-input" class="date-input" type="text" name="return-date" placeholder="Data" onfocus="(this.type='date')" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+							<input id="return-date-input" class="date-input" type="date" name="return-date" required pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}">
 							<select id="return-time-input" class="select-time" name="return-time">
 								<option value="" hidden>Laikas</option>
 								<option>00:00</option>
@@ -189,20 +157,20 @@
 					</form>
 				</div>
 
-<!--5. Aside -->
+<!-- Aside -->
 
 				<aside class="banner-window">
 					<div class="slideshow-container">
 						<div class="mySlides fade">
-							<img src="images/hybrid-car-1.jpg" alt="hybrid-cars">
+							<img src="app/images/hybrid-car-1.jpg" alt="hybrid-cars">
 							<div class="text">Platus hibridinių automobilių pasirinkimas</div>
 						</div>
 						<div class="mySlides fade">
-							<img src="images/hybrid-car-2.jpg" alt="hybrid-cars-free-extra" >
+							<img src="app/images/hybrid-car-2.jpg" alt="hybrid-cars-free-extra" >
 							<div class="text">Gausi komplektacija ir nemokama papildoma įranga</div>
 						</div>
 						<div class="mySlides fade">
-							<img src="images/hybrid-car-3.jpg" alt="hybrid-cars-crossover">
+							<img src="app/images/hybrid-car-3.jpg" alt="hybrid-cars-crossover">
 							<div class="text">Taupūs bei stilingi krosoveriai ir visureigiai </div>
 						</div>
 <!--
@@ -214,22 +182,22 @@
 			</article>
 			<div class="benefits">
 				<div>
-					<img src="images/eco-label.svg" alt="eco-label"><br>
+					<img src="app/images/eco-label.svg" alt="eco-label"><br>
 					<span>Ekologiški ir taupūs automobiliai</span>
 				</div>
 				<div>
-					<img src="images/ecommerce.svg" alt="ecomerce-label"><br>
+					<img src="app/images/ecommerce.svg" alt="ecomerce-label"><br>
 					<span>Paprastas ir greitas užsakymas</span>
 				</div>
 				<div>
-					<img src="images/hand-shake.svg" alt="hand-shake-label"><br>
+					<img src="app/images/hand-shake.svg" alt="hand-shake-label"><br>
 					<span>Profesionalumas, lankstumas, lojalumas</span>
 				</div>
         	</div>
 		</main>
-		
+
 <!--Section1 About us-->
-		
+
 		<section id="about">
 			<div class="about-us">
 				<div>
@@ -265,9 +233,9 @@
 				</div>
 			</div>
 		</section>
-		
+
 <!--Section2 Services-->
-		
+
 		<section id="services" class="services">
 				<h3>Paslaugos</h3>
 			<div class="accordion-block">
@@ -322,9 +290,9 @@
 					</div>
 			</div>
 		</section>
-		
+
 <!-- Section3 Contacts -->
-		
+
 		<section id="contacts">
 			<div>
 				<h3>Kontaktai</h3>
@@ -341,19 +309,19 @@
 				</div>
 				<div>
 					<a href="https://www.vilnius-airport.lt/" target="_blank">
-					<img class="vno-logo" src="images/vno-logo.png" alt="vilnius-airport" title="vilniaus-oro-uostas">
+					<img class="vno-logo" src="app/images/vno-logo.png" alt="vilnius-airport" title="vilniaus-oro-uostas">
 					</a>
 					<p>Rodūnios kelias 10a, Vilnius, LT-02189, Lietuva</p>
 				</div>
 				<div>
 					<a href="https://www.kaunas-airport.lt/" target="_blank">
-					<img src="images/kun-logo.png" alt="kaunas-airport" title="kauno-oro-uostas">
+					<img src="app/images/kun-logo.png" alt="kaunas-airport" title="kauno-oro-uostas">
 					</a>
 					<p>Oro uosto g. 4, Karmėlava, LT-54460, Lietuva</p>
 				</div>
 				<div>
 					<a href="https://www.palanga-airport.lt/" target="_blank">
-					<img class="plq-logo" src="images/plq-logo.png" alt="palanga-airport" title="palangos-oro-uostas">
+					<img class="plq-logo" src="app/images/plq-logo.png" alt="palanga-airport" title="palangos-oro-uostas">
 					</a>
 					<p>Liepojos pl. 1, Palanga, LT-00169, Lietuva</p>
 				</div>
@@ -362,43 +330,31 @@
 
 <!--Footer-->
 
-		<footer>
-			<div id="footer" class="footer">
-				<a href="https://linkedin.com/in/paulius-kundrutas-30739920" target="_blank">LinkedIn</a>
-				<a href="https://www.facebook.com/pauleoo" target="_blank">Facebook</a>
-				<a href="https://www.instagram.com/pauliuskundrutas/Instagram" target="_blank">Instagram</a>
-				<p class="copyright">&copy;2019 Bluerent</p>
-			</div>
-		</footer>
-		<script src="scripts/indexScript.js"></script>
-		<script src="scripts/carListScript.js"></script>
+		<?php
+			include('app/views/footer.php');
+		?>
 
-<!--script for set cookies-->
+<!--script-->
 
-<!--
+		<script src="app/scripts/indexScript.js"></script>
 		<script>
-			var pickupPlace = document.getElementById('select-pickup-place').value;
-			var pickupDate = document.getElementById('pickup-date-input').value;
-			var pickupTime = document.getElementById('pickup-time-input').value;
-			var returnPlace = document.getElementById('select-return-place').value;
-			var returnDate = document.getElementById('return-date-input').value;
-			var returnTime = document.getElementById('return-time-input').value;
+			var modal = document.getElementById("form-in-modal");
+			var btn = document.getElementById("open-form");
+			var span = document.getElementsByClassName("close-modal")[0];
 
-			function setCookie(cname,cvalue,exdays) {
-				var d = new Date();
-				d.setTime(d.getTime() + (exdays*24*60*60*1000));
-				var expires = "expires=" + d.toGMTString();
-				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			btn.onclick = function() {
+				modal.style.display = "block";
 			}
-			function saveValuesToCookies() {
-				setCookie('city', pickupPlace, 31);
-				setCookie('date', pickupDate, 31);
-				setCookie('time', pickupTime, 31);
-				setCookie('backCity', returnPlace, 31);
-				setCookie('backDate', returnDate, 31);
-				setCookie('backTime', returnTime, 31);
+
+			span.onclick = function() {
+				modal.style.display = "none";
+			}
+
+			window.onclick = function(event) {
+				if (event.target == modal) {
+				modal.style.display = "none";
+				}
 			}
 		</script>
--->
 	</body>
 </html>
