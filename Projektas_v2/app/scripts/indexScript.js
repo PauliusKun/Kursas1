@@ -76,4 +76,3 @@
 		modal.style.display = "none";
 		}
 	}
-

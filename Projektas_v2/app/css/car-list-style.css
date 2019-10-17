@@ -1,0 +1,346 @@
+/*1. rental period after header block*/
+
+.car-rental-period {
+	color: #11999E;
+	background-color: #EAF6F6;
+	font-size: 13px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.car-rental-period div {
+	margin: 0 20px;
+}
+
+.car-rental-period h5 {
+	text-align: center;
+	font-size: 14px;
+}
+
+.car-rental-period h6 {
+	text-align: center;
+	cursor: pointer;
+	font-size: 10px;
+	text-decoration: none;
+}
+
+.car-rental-period a:any-link {
+	color: #11999E;
+}
+
+.display-cookies {
+	display: flex;
+}
+
+.display-cookies span {
+	margin: 0 5px;
+}
+
+/*2. car-list*/
+
+.car-offer-bar {
+	color: #11999E;
+	height: 200px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.car-offer-bar img {
+	width: 250px;
+	height: 185px;
+}
+
+#white-background, #white-background2, #white-background3 {
+	background-color: #ffffff;
+}
+
+.car-offer-bar h4 {
+	text-align: left;
+	margin-top: 5px;
+}
+
+.car-offer-bar > div {
+	margin: 10px 5px 0 5px;
+}
+
+.about-car div, .about-price span {
+	margin: 20px 5px 0 5px;
+}
+
+.about-car, .about-price {
+	display: flex;
+	margin: 0;
+	align-items: center;
+}
+
+.about-price {
+	margin-top: 10px;
+}
+
+.about-price > span {
+	font-size: 18px;
+	font-weight: bold;
+	align-items: center;
+	vertical-align: bottom;
+	margin: 10px 5px;
+}
+
+.about-price button {
+	margin: 0;
+}
+
+@media all and (max-width: 800px) {
+	.car-offer-bar {
+		flex-flow: row wrap;
+	}
+}
+
+@media all and (max-width: 600px) {
+	.header-flex {
+		display: none;
+	}
+	.header-flex-2, .nav-bar {
+		justify-content: center;
+		font-size: 12px;
+	}
+	.car-offer-bar {
+		flex-flow: row wrap;
+		height: auto;
+	}
+	.car-offer-bar button {
+		font-size: 12px;
+	}
+	.car-rental-period {
+		text-align: center;
+		font-size: 60%;
+		flex-flow: column wrap;
+		margin: 0 auto;
+	}
+	.car-rental-period div {
+		justify-content: center;
+	}
+}
+
+/*3. modal-window*/
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	right: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+	background-color: #fefefe;
+	margin: 2px auto;
+	padding: 10px;
+	border: 1px solid #888;
+	width: 70%;
+}
+
+.modal-content hr {
+	display: none;
+	position: relative;
+}
+
+.modal-content h4 {
+	text-align: center;
+	margin: 0;
+}
+
+.close, .close2, .close3, .close4, .close5, .close6 {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close, .close2, .close3, .close4, .close5, .close6:hover, .close, .close2, .close3, .close4, .close5, .close6:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.selection-details {
+	display: flex;
+	justify-content: center;
+	flex-direction: row wrap;
+	flex-flow: row wrap;
+	margin-left: 20px;
+}
+
+.selection-details img {
+	width: 250px;
+	height: 160px;
+}
+
+.selection-details h5 {
+	margin-left: 5px;
+}
+
+.car-and-choice-details {
+	display: flex;
+}
+
+.included-extras-and-driver-form {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.included-extras-and-driver-form hr {
+	display: none;
+	position: relative;
+}
+
+.included-and-extras {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.included-and-extras div {
+	margin-bottom: 20px;
+}
+
+.included h5, .extras h5 {
+	margin: 10px 0 0 0;
+}
+
+.form-row div {
+	margin: 0 10px;
+}
+
+.driver-information {
+	margin: 0 0 0 50px;
+	border: 2px solid #EAF6F6;
+	border-radius: 6px;
+}
+
+.driver-information h5 {
+	text-align: center;
+	margin: 5px 0 10px 0;
+}
+
+.driver-form label {
+	font-weight: normal;
+	font-size: 14px;
+}
+
+.driver-form input {
+	width: 200px;
+}
+
+.driver-form textarea {
+	height: 30px;
+	width: 420px;
+}
+
+.total-price-and-payment {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.total-price-and-payment > div {
+	margin: 0 40px;
+}
+
+.sum-details {
+	display: flex;
+	flex-direction: row wrap;
+	justify-content: center;
+}
+
+.payment-choice {
+	text-align: center;
+}
+
+.payment-choice h5 {
+	margin: 10px 0 10px 0;
+}
+
+.sum-details div, .button-continue div {
+	margin-top: 15px;
+}
+
+@media all and (max-width: 1000px) {
+	.modal-content hr {
+		display:block;
+		width: 20%;
+		border-top: 1px solid #E1EDED;
+	}
+	.selection-details {
+		justify-content: center;
+		margin: 0 auto;
+		font-size: 14px;
+	}
+	.selection-details img {
+		width: 170px;
+		height: 120px;
+	}
+	.selection-details span {
+		margin: 0;
+	}
+	.selection-details h5 {
+		margin: 0 0 5px 0;
+	}
+	.included-extras-and-driver-form {
+		font-size: 14px;
+		justify-content: center;
+		margin: 10px auto;
+	}
+	.included-extras-and-driver-form hr {
+		display:block;
+		width: 20%;
+		border-top: 1px solid #E1EDED;
+	}
+	.included-and-extras div {
+		margin: 10px auto;
+	}
+	.included h5, .extras h5 {
+		text-align: center;
+		margin: 0;
+	}
+	.driver-information {
+		margin: 0;
+	}
+	.form-row div {
+		margin-top: 10px;
+	}
+	.button-continue, .sum-details {
+		margin-top: 10px;
+	}
+	.sum-details {
+		justify-content: center;
+		margin: 10px auto;
+		padding-top: 10px;
+	}
+	.button-continue {
+		width: 60%;
+		margin: 5px auto;
+	}
+}
+
+@media all and (max-width: 600px) {
+	.payment-choice span {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.driver-form textarea {
+		width: 320px;
+	}
+}

@@ -164,14 +164,14 @@
 
 //<!--script for calculate price-->
 
-//			function sumValues() {
+			function sumValues() {
 				var totalPrice;
 				var dayPrice = Number(document.getElementsByClassName('day-price').value);
 				var priceForExtra = Number(document.getElementsByClassName('price-for-extra').value);
 
 				var totalPrice = dayPrice + priceForExtra;
 				document.getElementsByClassName('total-price').innerHTML = totalPrice;
-//			}
+			}
 
 //<!--script for madal	-->
 

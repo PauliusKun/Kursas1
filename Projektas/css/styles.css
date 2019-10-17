@@ -1,0 +1,624 @@
+/** List */
+/*
+1. Body
+2. Header
+3. Article
+4. Aside
+5. Aside 2
+6. Section 1 - about us
+7. Section 2 - services
+8. Section 2 - contacts
+9. Footer
+*/
+
+
+					/*1.Body*/
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #EAF6F6;
+	margin: 0 auto;
+}
+
+figcaption {
+	color: #66BFBF;
+}
+
+					/*2. Header*/
+
+.first-header-block, .second-header-block {
+	font-size: 12px;
+	color: #ffffff;
+	background-color:#66BFBF;
+	text-align:center;
+	align-items: center;
+	display: flex;
+	justify-content:space-between;
+	flex-direction: row;
+	padding: 0 50px;
+}
+
+.second-header-block {
+	background-color:#EAF6F6;
+	font-size: 18px;
+	padding-top: 20px;
+}
+
+/*logo and top contacts*/
+
+.logo {
+	padding-top: 5px;
+}
+
+.logo img {
+	width: 200px;
+}
+
+.top-telephone-and-mail {
+	align-items:center;
+	display: flex;
+}
+
+.top-telephone-and-mail a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.hours-icon {
+	height: 20px;
+}
+
+.mail-icon {
+	height: 20px;
+	padding-left: 10px;
+}
+
+.select-language select{
+	border: none;
+	background-color: #66BFBF;
+	color: #ffffff;
+	}
+
+/*meniu bar*/
+
+.nav-bar {
+	background-color: #EAF6F6;
+	height: 70px;
+	align-items:center;
+	display: flex;
+	flex-direction: row;
+}
+
+.nav-bar a {
+	color: #66BFBF;
+	font-family: 'Merriweather', serif;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.nav-bar a:hover {
+	color: #FFFFFF;
+	font-family: 'Merriweather', serif;
+}
+
+.nav-bar div {
+	width: 90px;
+	height: 30px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	border-right: 1px solid #66BFBF;
+}
+
+.nav-bar div:hover {
+	background-color: #66BFBF;
+}
+
+.nav-bar div:last-child {
+	border-right: none;
+}
+
+@media all and (max-width: 800px) {
+	.first-header-block {
+		padding: 10px;
+		justify-content:space-between;
+	}
+	.second-header-block {
+		flex-flow: column wrap;
+		padding: 0px;
+		justify-content: center;
+	}
+}
+
+@media all and (max-width: 600px) {
+	.nav-bar {
+		font-size: 12px;
+	}
+	.nav-bar div {
+		width: 70px;
+	}
+}
+
+					/*3. Article*/
+
+.search-form-and-banner {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	padding: 20px 50px;
+}
+
+.car-search-window {
+	background-color: #66BFBF;
+	color: #11999E;
+	padding: 0 10px;
+	border-radius: 6px;
+}
+
+.car-search-window h3 {
+	color: #ffffff;
+}
+
+.car-search-window span {
+	color: #ffffff;
+	padding: 0 6px;
+}
+
+.form-section div {
+	padding: 5px 0;
+}
+
+.select-date-and-time {
+	display: flex;
+	flex-direction: row;
+	padding: 20px;
+}
+
+.select-date-and-time select {
+	margin: 5px;
+}
+
+.select-pickup-place, .select-return-place {
+	background-color: #EAF6F6;
+	color: #11999E;
+	height: 30px;
+	width: 50%;
+	font-size: 16px;
+	border: 1px solid #11999E;
+	border-radius: 4px;
+}
+
+.date-input {
+	background: url(calendar-icon.png) 97% no-repeat;
+}
+.date-input::-webkit-inner-spin-button {
+	display: none;
+}
+.date-input::-webkit-calendar-picker-indicator {
+	opacity: 0;
+}
+
+.date-input {
+	background-color: #EAF6F6;
+	color: #11999E;
+	font-size: 14px;
+	margin: 5px;
+	border: 1px solid #11999E;
+	border-radius: 4px;
+	width: 130px;
+}
+
+.date-input::placeholder {
+	color: #11999E;
+}
+
+.select-time {
+	background-color: #EAF6F6;
+	color: #11999E;
+	font-size: 16px;
+	border: 1px solid #11999E;
+	border-radius: 4px;
+}
+
+.button {
+	background: #11cdd4;
+	background-image: linear-gradient(to bottom, #11cdd4, #11999e);
+	width: 100%;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	color: #ffffff;
+	text-decoration: none;
+	cursor: pointer;
+	margin-top: 10px;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 8px;
+}
+
+.button:hover {
+	background: #30e3cb;
+	background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+	text-decoration: none;
+}
+
+@media all and (max-width: 800px) {
+	.search-form-and-banner {
+		justify-content:center;
+		padding: 10px;
+	}
+	.car-search-window {
+		flex: 1 0 0;
+		text-align: center;
+	}
+	.select-date-and-time {
+		justify-content: center;
+	}
+	.select-pickup-place, .select-return-place {
+		width: auto;
+	}
+}
+
+@media all and (max-width: 600px) {
+	.search-form-and-banner {
+		justify-content: center;
+		padding: 10px;
+		flex: 1 0 0;
+	}
+	.car-search-window {
+		flex: 1 0 0;
+	}
+	.select-date-and-time {
+		flex-flow: column;
+	}
+	.select-pickup-place, .select-return-place, .select-time {
+		height: 30px;
+	}
+	.date-input {
+		height: 28px;
+		width: auto;
+		}
+}
+
+					/*4. Aside*/
+
+.banner-window {
+	width: 55%;
+	align-items: center;
+/*
+	display: flex;
+	justify-content: center;
+*/
+	border-radius: 6px;
+}
+
+.banner-window img {
+	width: 100%;
+	border-radius: 6px;
+}
+
+@media all and (max-width: 800px) {
+	.banner-window {
+		display: none;
+	}
+}
+
+/** code from w3scool example*/
+
+.slideshow-container {
+	max-width: 100%;
+	position: relative;
+	margin: 0;
+	border-radius: 6px;
+}
+
+.mySlides {
+	display: none;
+}
+
+.text {
+	color: #F2F2F2;
+	background-color: rgba(0,0,0,0.5);
+	font-size: 20px;
+	font-weight: bold;
+	padding: 8px 0;
+	position: absolute;
+	bottom: 8px;
+	width: 100%;
+	text-align: center;
+}
+
+/*
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	user-select: none;
+	border-radius: 0 3px 3px 0;
+}
+*/
+
+/*
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+	background-color: rgba(0,0,0,0.8);
+}
+*/
+
+					/*5. Aside 2*/
+
+.benefits {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	padding: 50px;
+}
+
+.benefits img {
+	width: 80px;
+}
+
+.benefits div {
+	text-align: center;
+	color: #66BFBF;
+	font-weight: bold;
+	padding: 10px 100px;
+}
+
+@media all and (max-width: 800px) {
+	.benefits {
+		justify-content: center;
+		padding: 10px;
+	}
+	.benefits div {
+		padding: 10px;
+	}
+}
+
+@media all and (max-width: 600px) {
+	.benefits {
+		display: none;
+	}
+}
+
+					/*6. Section 1 - about us*/
+
+#about {
+	background-color: #ffffff;
+	color: #66BFBF;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content:space-around;
+	margin: 0 auto;
+	padding: 20px 50px;
+}
+
+#about h3 {
+	text-align: center;
+}
+
+.about-us {
+	text-align: left;
+	width: 500px;
+
+}
+.about-us div {
+	display: flex;
+	flex-direction: column;
+}
+
+.advantages-list {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-bottom: 20px;
+}
+
+.advantages-list div {
+	width: 100px;
+	margin: 5px auto;
+	padding-top: 10px;
+}
+
+.tooltip {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	border-bottom: 1px dotted #66BFBF;
+}
+
+.tooltip .tooltiptext {
+	margin-left: 10px;
+	transform: translate(0, -40%);
+	visibility: hidden;
+	width: 200px;
+	background-color: #66BFBF;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px;
+	position: absolute;
+	z-index: 1;
+	content: " ";
+}
+
+.tooltip .tooltiptext::after {
+	content: " ";
+	position: absolute;
+	top: 40%;
+	right: 100%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent #66BFBF transparent transparent;
+	}
+
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+}
+
+@media all and (max-width: 600px) {
+	#about {
+		padding: 10px;
+		font-size: 14px;
+	}
+	.tooltip .tooltiptext {
+		bottom: 100%;
+		left: 50%;
+		margin-left: -100px;
+		transform: translate(0, 0);
+	}
+	.tooltip .tooltiptext::after {
+		content: " ";
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		margin-left: -5px;
+		border-width: 5px;
+		border-style: solid;
+		border-color: #66BFBF transparent transparent transparent;
+	}
+}
+
+					/*7. Section 2 - services*/
+
+#services {
+	background-color: #EAF6F6;
+	color: #66BFBF;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+#services h3 {
+	text-align: center;
+}
+
+#services hr {
+	border-top: 1px solid #E1EDED;
+	width: 250px;
+}
+
+.accordion-block {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.accordion {
+	background-color: #EAF6F6;
+	color: #66BFBF;
+	cursor: pointer;
+	padding: 18px;
+	width: 350px;
+	border: none;
+	text-align: center;
+	outline: none;
+	font-size: 17px;
+	transition: 0.4s;
+}
+
+.active, .accordion:hover {
+	background-color: #EAF6F6;
+}
+
+.accordion:after {
+	content: '\002B';
+	color: #66BFBF;
+	font-weight: bold;
+	float: right;
+	margin-right: 50px;
+}
+
+.active:after {
+	content: "\2212";
+}
+
+.panel {
+	padding: 0 18px;
+	background-color: #EAF6F6;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}
+
+					/*8. Section 2 - contacts*/
+
+#contacts {
+	background-color: #ffffff;
+	color: #66BFBF;
+	text-align: center;
+	padding: 10px 30px;
+}
+
+.company-details {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.company-details div {
+	text-align: center;
+	width: 200px;
+	margin: 20px;
+}
+
+.company-details div img {
+	width: 50%;
+}
+
+.vno-logo {
+	margin-top: 55px;
+}
+
+.plq-logo {
+	margin-top: 20px;
+}
+
+@media all and (max-width: 600px) {
+	.company-details div {
+		width: 200px;
+		font-size: 12px;
+	}
+}
+
+					/*9. Footer */
+
+.footer {
+	background-color: #66BFBF;
+	text-align: center;
+	margin: 0 auto;
+	padding: 20px 0 0;
+}
+
+.footer a{
+	color: #11999E;
+	font-family: 'Montserrat', sans-serif;
+	margin: 10px 20px;
+	text-decoration: none;
+}
+
+.footer a:hover{
+	color: #EAF6F6;
+}
+
+.copyright{
+	color: #EAF6F6;
+	font-size: 12px;
+	padding: 15px;
+	margin: 0;
+}
