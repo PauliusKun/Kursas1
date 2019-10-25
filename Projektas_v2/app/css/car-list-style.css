@@ -33,7 +33,7 @@
 	display: flex;
 }
 
-.display-cookies span {
+.display-cookies output {
 	margin: 0 5px;
 }
 
@@ -53,10 +53,6 @@
 	height: 185px;
 }
 
-#white-background, #white-background2, #white-background3 {
-	background-color: #ffffff;
-}
-
 .car-offer-bar h4 {
 	text-align: left;
 	margin-top: 5px;
@@ -64,6 +60,10 @@
 
 .car-offer-bar > div {
 	margin: 10px 5px 0 5px;
+}
+
+#white-background, #white-background2, #white-background3 {
+	background-color: #ffffff;
 }
 
 .about-car div, .about-price span {
@@ -90,6 +90,14 @@
 
 .about-price button {
 	margin: 0;
+}
+
+.total-price {
+	font-weight: bold;
+}
+
+.car-price-hidden {
+	display: none;
 }
 
 @media all and (max-width: 800px) {
@@ -171,6 +179,32 @@
 	cursor: pointer;
 }
 
+.pickup-place-modal, .return-place-modal {
+	color: #11999E;
+	background-color: #fefefe;
+	font-size: 15px;
+	border: none;
+	height: 14px;
+}
+
+.pickup-date-modal, .return-date-modal {
+	color: #11999E;
+	background-color: #fefefe;
+	font-size: 15px;
+	border: none;
+	height: 15px;
+	width: 80px;
+}
+
+.pickup-time-modal, .return-time-modal {
+	color: #11999E;
+	background-color: #fefefe;
+	font-size: 15px;
+	border: none;
+	height: 15px;
+	width: 80px;
+}
+
 .selection-details {
 	display: flex;
 	justify-content: center;
@@ -188,8 +222,17 @@
 	margin-left: 5px;
 }
 
+.make-br, .make-br2 {
+	display: none;
+}
+
+.period-in-modal {
+	margin-left: 5px;
+}
+
 .car-and-choice-details {
 	display: flex;
+	margin-left: 20px;
 }
 
 .included-extras-and-driver-form {
@@ -210,12 +253,50 @@
 	flex-wrap: wrap;
 }
 
-.included-and-extras div {
+.included-and-extras div:first-child {
 	margin-bottom: 20px;
 }
 
 .included h5, .extras h5 {
 	margin: 10px 0 0 0;
+}
+
+/*tooltip for explain insurance*/
+
+.tooltip-insurance {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.tooltip-insurance .tooltiptext-insurance {
+	margin-left: 10px;
+	transform: translate(0, -100%);
+	visibility: hidden;
+	width: 500px;
+	background-color: #66BFBF;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px;
+	position: absolute;
+	z-index: 1;
+	content: " ";
+}
+
+.tooltip-insurance .tooltiptext-insurance::after {
+	content: " ";
+	position: absolute;
+	top: 85%;
+	right: 100%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent #66BFBF transparent transparent;
+	}
+
+.tooltip-insurance:hover .tooltiptext-insurance {
+	visibility: visible;
 }
 
 .form-row div {
@@ -264,16 +345,32 @@
 	justify-content: center;
 }
 
+.sum-details div {
+	text-align: right;
+}
+
+.sum-details div:first-child {
+	text-align: left;
+}
+
+.total-price-modal {
+	font-weight: bold;
+}
+
 .payment-choice {
 	text-align: center;
 }
 
 .payment-choice h5 {
-	margin: 10px 0 10px 0;
+	margin: 10px 0;
 }
 
 .sum-details div, .button-continue div {
 	margin-top: 15px;
+}
+
+.hidden, #rental_period {
+	display: none;
 }
 
 @media all and (max-width: 1000px) {
@@ -292,7 +389,7 @@
 		height: 120px;
 	}
 	.selection-details span {
-		margin: 0;
+		margin-left: 0;
 	}
 	.selection-details h5 {
 		margin: 0 0 5px 0;
@@ -334,13 +431,40 @@
 	}
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 720px) {
+	.driver-information {
+		width: 300px;
+	}
 	.payment-choice span {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 	}
 	.driver-form textarea {
-		width: 320px;
+		width: 220px;
+	}
+	.payment-choice h5 {
+		margin: 20px 0 0;
+	}
+}
+
+@media all and (max-width: 672px) {
+	.make-br {
+		display: block;
+	}
+	.pickup-place-modal, .return-place-modal, .pickup-date-modal, .return-date-modal, .pickup-time-modal, .return-time-modal {
+		font-size: 13px;
+	}
+}
+
+@media all and (max-width: 380px) {
+	.driver-information {
+		width: 220px;
+	}
+	.driver-form textarea {
+		width: 200px;
+	}
+	.make-br2 {
+		display: block;
 	}
 }

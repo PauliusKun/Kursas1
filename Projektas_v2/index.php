@@ -1,8 +1,6 @@
-<!--
 <?php
 	require __DIR__ . '/app/src/app.php';
 ?>
--->
 <!DOCTYPE html>
 <html lang="lt">
 	<head>
@@ -16,9 +14,9 @@
 
 <!-- Header -->
 
-		<?php
-			include('app/views/header.php');
-		?>
+	<?php
+		include('app/views/header.php');
+	?>
 
 <!-- Article -->
 
@@ -29,16 +27,16 @@
 					<form class="form-section" action="car-list.php">
 						<span>Pėmimas</span>
 						<div class="select-date-and-time">
-							<select id="select-pickup-place" class="select-pickup-place" name="pickup-place">
+							<select id="select-pickup-place" class="select-pickup-place" name="pickup-place" required>
 								<option value="" disabled selected>Paėmimo vieta</option>
-								<option value="Vilniaus ofisas, Priegliaus 17">Vilniaus ofisas, Priegliaus 17</option>
+								<option value="Vilniaus ofisas, Priegliaus g.">Vilniaus ofisas, Priegliaus g.</option>
 								<option value="Vilniaus Oro Uostas (VNO)">Vilniaus Oro Uostas (VNO)</option>
 								<option value="Kauno Oro Uostas (KUN)">Kauno Oro Uostas (KUN)</option>
 								<option value="Palangos Oro Uostas (PLQ)">Palangos Oro Uostas (PLQ)</option>
 								<option value="Kita vieta">Kita vieta</option>
 							</select>
-							<input id="pickup-date-input" class="date-input" type="date" name="pickup-date">
-							<select id="pickup-time-input" class="select-time" name="pickup-time">
+							<input id="pickup-date-input" class="date-input" type="date" name="pickup-date" required>
+							<select id="pickup-time-input" class="select-time" name="pickup-time" required>
 								<option value="" hidden>Laikas</option>
 								<option>00:00</option>
 								<option>00:30</option>
@@ -92,16 +90,16 @@
 						</div>
 						<span>Grąžinimas</span>
 						<div class="select-date-and-time">
-							<select id="select-return-place" class="select-return-place" name="return-place">
+							<select id="select-return-place" class="select-return-place" name="return-place" required>
 								<option value="" disabled selected>Grąžinimo vieta</option>
-								<option value="Vilniaus ofisas, Priegliaus 17">Vilniaus ofisas, Priegliaus 17</option>
+								<option value="Vilniaus ofisas, Priegliaus g.">Vilniaus ofisas, Priegliaus g.</option>
 								<option value="Vilniaus Oro Uostas (VNO)">Vilniaus Oro Uostas (VNO)</option>
 								<option value="Kauno Oro Uostas (KUN)">Kauno Oro Uostas (KUN)</option>
 								<option value="Palangos Oro Uostas (PLQ)">Palangos Oro Uostas (PLQ)</option>
 								<option value="Kita vieta">Kita vieta</option>
 							</select>
-							<input id="return-date-input" class="date-input" type="date" name="return-date">
-							<select id="return-time-input" class="select-time" name="return-time">
+							<input id="return-date-input" class="date-input" type="date" name="return-date" required>
+							<select id="return-time-input" class="select-time" name="return-time" required>
 								<option value="" hidden>Laikas</option>
 								<option>00:00</option>
 								<option>00:30</option>
@@ -339,24 +337,6 @@
 <!--script-->
 
 		<script src="app/scripts/indexScript.js"></script>
-		<script>
-			var modal = document.getElementById("form-in-modal");
-			var btn = document.getElementById("open-form");
-			var span = document.getElementsByClassName("close-modal")[0];
 
-			btn.onclick = function() {
-				modal.style.display = "block";
-			}
-
-			span.onclick = function() {
-				modal.style.display = "none";
-			}
-
-			window.onclick = function(event) {
-				if (event.target == modal) {
-				modal.style.display = "none";
-				}
-			}
-		</script>
 	</body>
 </html>

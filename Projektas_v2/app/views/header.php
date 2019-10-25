@@ -31,7 +31,7 @@
 		<nav id="nav-bar" class="nav-bar">
 			<div><a href="index.php#about">Apie mus</a></div>
 			<div><a href="index.php#services">Paslaugos</a></div>
-			<div><a href="documents/salygos.pdf" target="_blank">Sąlygos</a></div>
+			<div><a href="app/documents/salygos.pdf" target="_blank">Sąlygos</a></div>
 			<div><a href="index.php#contacts">Kontaktai</a></div>
 		</nav>
 	</div>

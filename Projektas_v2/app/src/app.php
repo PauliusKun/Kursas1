@@ -1,5 +1,6 @@
 <?php
 	if(isset($_POST['submit'])) {
+		include_once 'db.php';
 
 		$name = trim($_POST['name']);
 		$surname = trim($_POST['surname']);
@@ -20,6 +21,14 @@
 			exit();
 		}
 
+		$mysqli = new mysqli(DB_SERVER, DB_USER, DB_PASSWORD, DB_NAME);
+		if($mysqli->connect_error) {
+			echo "Atsiprašome, bet svetainė susidūrė su problema.\n";
+			echo 'Klaida: ' . $mysqli->connect_error . '\n';
+			exit();
+	}
+		mysqli_query($mysqli, "INSERT INTO klientai (name, surname, phone, email, intcar, intperiod, message) VALUES('$_POST[name]', '$_POST[surname]', '$_POST[phone]', '$_POST[email]', '$_POST[interest_car]', '$_POST[interest_period]', '$_POST[message]')");
+
 		$from = "$email";
 		$to = "p.kundrutas@gmail.com";
 		$subject = "Nauja žinutė";
@@ -27,5 +36,4 @@
 		$zinute = htmlspecialchars($message);
 //		mail($to, $subject, $autorius, $zinute, $from);
 		echo "<script>alert('Dėkojame. Jūsų užklausa gauta. Netrukus su Jumis susisieksime.');</script>";
-		include 'db.php';
 }

@@ -120,8 +120,8 @@ figcaption {
 
 @media all and (max-width: 800px) {
 	.first-header-block {
-		padding: 10px;
-		justify-content:space-between;
+		justify-content: space-between;
+		padding: 0 5px;
 	}
 	.second-header-block {
 		flex-flow: column wrap;
@@ -239,13 +239,21 @@ figcaption {
 	text-decoration: none;
 }
 
+@media all and (max-width: 1200px) {
+	.search-form-and-banner {
+		justify-content: center;
+	}
+	.car-search-window {
+		margin: 20px auto;
+	}
+}
+
 @media all and (max-width: 800px) {
 	.search-form-and-banner {
 		justify-content:center;
 		padding: 10px;
 	}
 	.car-search-window {
-		flex: 1 0 0;
 		text-align: center;
 	}
 	.select-date-and-time {
@@ -260,9 +268,6 @@ figcaption {
 	.search-form-and-banner {
 		justify-content: center;
 		padding: 10px;
-		flex: 1 0 0;
-	}
-	.car-search-window {
 		flex: 1 0 0;
 	}
 	.select-date-and-time {
@@ -282,10 +287,6 @@ figcaption {
 .banner-window {
 	width: 55%;
 	align-items: center;
-/*
-	display: flex;
-	justify-content: center;
-*/
 	border-radius: 6px;
 }
 
@@ -299,8 +300,6 @@ figcaption {
 		display: none;
 	}
 }
-
-/** code from w3scool example*/
 
 .slideshow-container {
 	max-width: 100%;

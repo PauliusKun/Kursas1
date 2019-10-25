@@ -2,4 +2,4 @@
 	define("DB_SERVER", "localhost");
 	define("DB_USER", "root");
 	define("DB_PASSWORD", "");
-	define("DB_NAME", "potencialus_klientai");
+	define("DB_NAME", "bluerent_uzsakymai");

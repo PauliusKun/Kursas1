@@ -9,37 +9,37 @@
 					<div class="form-row">
 						<div>
 							<label for="first-name">Vardas: <span>*</span></label><br>
-							<input type="text" name="name" placeholder="Jūsų vardas" required autofocus>
+							<input id="first-name" type="text" name="name" placeholder="Jūsų vardas" required autofocus>
 						</div>
 						<div>
 							<label for="second-name">Pavardė: <span>*</span></label><br>
-							<input type="text" name="surname" placeholder="Jūsų pavardė" required>
+							<input id="second-name" type="text" name="surname" placeholder="Jūsų pavardė" required>
 						</div>
 					</div>
 					<div class="form-row">
 						<div>
 							<label for="telephone">Telefonas: <span>*</span></label><br>
-							<input type="tel" name="phone" placeholder="Jūsų telefono numeris" required>
+							<input id="telephone" type="tel" name="phone" placeholder="Jūsų telefono numeris" required>
 						</div>
 						<div>
 							<label for="e-mail">El.paštas: <span>*</span></label><br>
-							<input type="email" name="email" placeholder="Jūsų elektroninis paštas" required>
+							<input id="e-mail" type="email" name="email" placeholder="Jūsų elektroninis paštas" required>
 						</div>
 					</div>
 					<div class="form-row">
 						<div>
 							<label for="car">Automobilis:</label><br>
-							<input type="text" name="interest_car" placeholder="Dominantis automobilis">
+							<input id="car" type="text" name="interest_car" placeholder="Dominantis automobilis">
 						</div>
 						<div>
 							<label for="period">Nuomos trukmė:</label><br>
-							<input type="number" name="interest_period" placeholder="Dominanti nuomos trukmė">
+							<input id="period" type="number" name="interest_period" placeholder="Dominanti nuomos trukmė">
 						</div>
 					</div>
 					<div class="form-row">
 						<div>
 							<label for="message">Žinutė: <span>*</span></label><br>
-							<textarea name="message" placeholder="Jūsų žinutė..." required></textarea>
+							<textarea id="message" name="message" placeholder="Jūsų žinutė..." required></textarea>
 						</div>
 						<div>
 							<button id="contact-form-submit" class="button" name="submit" type="submit">Siųsti</button>

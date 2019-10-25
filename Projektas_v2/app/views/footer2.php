@@ -8,38 +8,38 @@
 					<h3>Užklausos forma</h3>
 					<div class="form-row">
 						<div>
-							<label for="first-name">Vardas: <span>*</span></label><br>
-							<input type="text" name="name" placeholder="Jūsų vardas" required autofocus>
+							<label for="first-name0">Vardas: <span>*</span></label><br>
+							<input id="first-name0" type="text" name="name" placeholder="Jūsų vardas" required autofocus>
 						</div>
 						<div>
-							<label for="second-name">Pavardė: <span>*</span></label><br>
-							<input type="text" name="surname" placeholder="Jūsų pavardė" required>
-						</div>
-					</div>
-					<div class="form-row">
-						<div>
-							<label for="telephone">Telefonas: <span>*</span></label><br>
-							<input type="tel" name="phone" placeholder="Jūsų telefono numeris" required>
-						</div>
-						<div>
-							<label for="e-mail">El.paštas: <span>*</span></label><br>
-							<input type="email" name="email" placeholder="Jūsų elektroninis paštas" required>
+							<label for="second-name0">Pavardė: <span>*</span></label><br>
+							<input id="second-name0" type="text" name="surname" placeholder="Jūsų pavardė" required>
 						</div>
 					</div>
 					<div class="form-row">
 						<div>
-							<label for="car">Automobilis:</label><br>
-							<input type="text" name="interest_car" placeholder="Dominantis automobilis">
+							<label for="telephone0">Telefonas: <span>*</span></label><br>
+							<input id="telephone0" type="tel" name="phone" placeholder="Jūsų telefono numeris" required>
 						</div>
 						<div>
-							<label for="period">Nuomos trukmė:</label><br>
-							<input type="number" name="interest_period" placeholder="Dominanti nuomos trukmė">
+							<label for="e-mail0">El.paštas: <span>*</span></label><br>
+							<input id="e-mail0" type="email" name="email" placeholder="Jūsų elektroninis paštas" required>
 						</div>
 					</div>
 					<div class="form-row">
 						<div>
-							<label for="message">Žinutė: <span>*</span></label><br>
-							<textarea name="message" placeholder="Jūsų žinutė..." required></textarea>
+							<label for="car0">Automobilis:</label><br>
+							<input id="car0" type="text" name="interest_car" placeholder="Dominantis automobilis">
+						</div>
+						<div>
+							<label for="period0">Nuomos trukmė:</label><br>
+							<input id="period0" type="number" name="interest_period" placeholder="Dominanti nuomos trukmė">
+						</div>
+					</div>
+					<div class="form-row">
+						<div>
+							<label for="message0">Žinutė: <span>*</span></label><br>
+							<textarea id="message0" name="message" placeholder="Jūsų žinutė..." required></textarea>
 						</div>
 						<div>
 							<button id="contact-form-submit" class="button" name="submit" type="submit">Siųsti</button>
